@@ -1,2 +1,3 @@
 # bh7cw.github.io
-please visit www.bh7cw.de
+
+Forked from https://github.com/blinkfox/hexo-theme-matery.git
