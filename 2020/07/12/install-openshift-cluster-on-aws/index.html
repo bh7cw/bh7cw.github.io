@@ -367,7 +367,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    866
+                    856
                 </div>
                 
 
@@ -389,7 +389,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Install-Openshift-Cluster-on-AWS"><a href="#Install-Openshift-Cluster-on-AWS" class="headerlink" title="Install Openshift Cluster on AWS"></a>Install Openshift Cluster on AWS</h1><h6 id="tags-blog"><a href="#tags-blog" class="headerlink" title="tags: blog"></a>tags: <code>blog</code></h6><h2 id="Install-the-AWS-CLI-tools-Optional"><a href="#Install-the-AWS-CLI-tools-Optional" class="headerlink" title="Install the AWS CLI tools(Optional):"></a>Install the AWS CLI tools(Optional):</h2><h3 id="Download-the-latest-AWS-Command-Line-Interface"><a href="#Download-the-latest-AWS-Command-Line-Interface" class="headerlink" title="Download the latest AWS Command Line Interface"></a>Download the latest AWS Command Line Interface</h3><pre><code>sudo -i
+                <h1 id="Install-Openshift-Cluster-on-AWS"><a href="#Install-Openshift-Cluster-on-AWS" class="headerlink" title="Install Openshift Cluster on AWS"></a>Install Openshift Cluster on AWS</h1><h2 id="Install-the-AWS-CLI-tools-Optional"><a href="#Install-the-AWS-CLI-tools-Optional" class="headerlink" title="Install the AWS CLI tools(Optional):"></a>Install the AWS CLI tools(Optional):</h2><h3 id="Download-the-latest-AWS-Command-Line-Interface"><a href="#Download-the-latest-AWS-Command-Line-Interface" class="headerlink" title="Download the latest AWS Command Line Interface"></a>Download the latest AWS Command Line Interface</h3><pre><code>sudo -i
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip</code></pre><h3 id="Install-the-AWS-CLI-into-bin-aws"><a href="#Install-the-AWS-CLI-into-bin-aws" class="headerlink" title="Install the AWS CLI into /bin/aws"></a>Install the AWS CLI into /bin/aws</h3><p><code>./awscli-bundle/install -i /usr/local/aws -b /bin/aws</code></p>
 <h3 id="Validate-the-AWS-CLI-works"><a href="#Validate-the-AWS-CLI-works" class="headerlink" title="Validate the AWS CLI works"></a>Validate the AWS CLI works</h3><p><code>aws --version</code></p>
@@ -468,7 +468,7 @@ oc whoami oc get nodes oc get pod -A
 Clean Up Cluster (Reference)</code></pre><p>Delete the cluster:<br><code>openshift-install destroy cluster --dir $HOME/cluster-${GUID}</code></p>
 <p>Delete all of the files created by the OpenShift installer:</p>
 <pre><code>rm -rf $HOME/.kube
-rm -rf $HOME/cluster-${GUID}</code></pre><p>Ref:<br><a href="https://github.com/openshift/installer/blob/master/docs/user/aws/README.md" target="_blank" rel="noopener">https://github.com/openshift/installer/blob/master/docs/user/aws/README.md</a></p>
+rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.com/openshift/installer/blob/master/docs/user/aws/README.md" target="_blank" rel="noopener">Openshift Installer</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -912,7 +912,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                class="white-color">991</span>&nbsp;
+                class="white-color">981</span>&nbsp;
             
             
             
