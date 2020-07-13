@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bh7cw.github.io/"/>
-  <updated>2020-07-13T01:51:24.891Z</updated>
+  <updated>2020-07-13T19:51:29.572Z</updated>
   <id>https://bh7cw.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hack on Fedora on AWS EC2</title>
+    <link href="https://bh7cw.github.io/2020/07/13/hack-on-fedora-on-aws-ec2/"/>
+    <id>https://bh7cw.github.io/2020/07/13/hack-on-fedora-on-aws-ec2/</id>
+    <published>2020-07-13T22:33:49.000Z</published>
+    <updated>2020-07-13T19:51:29.572Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Build-image-with-COSA&quot;&gt;&lt;a href=&quot;#Build-image-with-COSA&quot; class=&quot;headerlink&quot; title=&quot;Build image with COSA&quot;&gt;&lt;/a&gt;Build image with
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
+    
+    
+      <category term="Fedora" scheme="https://bh7cw.github.io/tags/Fedora/"/>
+    
+      <category term="CoreOS Assembler" scheme="https://bh7cw.github.io/tags/CoreOS-Assembler/"/>
+    
+      <category term="AWS" scheme="https://bh7cw.github.io/tags/AWS/"/>
+    
+  </entry>
   
   <entry>
     <title>Install Openshift Cluster on AWS</title>
@@ -39,9 +70,9 @@
       <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
     
     
-      <category term="Openshift" scheme="https://bh7cw.github.io/tags/Openshift/"/>
-    
       <category term="AWS" scheme="https://bh7cw.github.io/tags/AWS/"/>
+    
+      <category term="Openshift" scheme="https://bh7cw.github.io/tags/Openshift/"/>
     
   </entry>
   
