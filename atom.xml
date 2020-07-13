@@ -48,6 +48,31 @@
   </entry>
   
   <entry>
+    <title>Hello World</title>
+    <link href="https://bh7cw.github.io/2020/07/13/hello-world/"/>
+    <id>https://bh7cw.github.io/2020/07/13/hello-world/</id>
+    <published>2020-07-13T21:31:17.557Z</published>
+    <updated>2020-07-13T21:31:17.557Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Install Openshift Cluster on AWS</title>
     <link href="https://bh7cw.github.io/2020/07/12/install-openshift-cluster-on-aws/"/>
     <id>https://bh7cw.github.io/2020/07/12/install-openshift-cluster-on-aws/</id>
@@ -73,29 +98,6 @@
       <category term="AWS" scheme="https://bh7cw.github.io/tags/AWS/"/>
     
       <category term="Openshift" scheme="https://bh7cw.github.io/tags/Openshift/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://bh7cw.github.io/2020/07/12/hello-world/"/>
-    <id>https://bh7cw.github.io/2020/07/12/hello-world/</id>
-    <published>2020-07-12T14:48:36.248Z</published>
-    <updated>2020-07-12T14:48:36.248Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
