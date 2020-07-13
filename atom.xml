@@ -39,11 +39,11 @@
       <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
     
     
+      <category term="AWS" scheme="https://bh7cw.github.io/tags/AWS/"/>
+    
       <category term="Fedora" scheme="https://bh7cw.github.io/tags/Fedora/"/>
     
       <category term="CoreOS Assembler" scheme="https://bh7cw.github.io/tags/CoreOS-Assembler/"/>
-    
-      <category term="AWS" scheme="https://bh7cw.github.io/tags/AWS/"/>
     
   </entry>
   
@@ -95,9 +95,9 @@
       <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
     
     
-      <category term="AWS" scheme="https://bh7cw.github.io/tags/AWS/"/>
-    
       <category term="Openshift" scheme="https://bh7cw.github.io/tags/Openshift/"/>
+    
+      <category term="AWS" scheme="https://bh7cw.github.io/tags/AWS/"/>
     
   </entry>
   
