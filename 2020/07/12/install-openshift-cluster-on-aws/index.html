@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Rust, Golang, Java, Linux, Opensource, HAM">
+    <meta name="keywords" content="Install Openshift Cluster on AWS, Rust, Golang, Java, Linux, Opensource, HAM">
     <meta name="description" content="enjoy your life">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | bh7cw</title>
+    <title>Install Openshift Cluster on AWS | bh7cw</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -202,12 +202,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Install Openshift Cluster on AWS</h1>
                 </div>
             </div>
         </div>
@@ -322,12 +322,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Openshift/">
+                                <span class="chip bg-color">Openshift</span>
+                            </a>
+                        
+                            <a href="/tags/AWS/">
+                                <span class="chip bg-color">AWS</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -350,14 +367,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    125
+                    866
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    5 Min
                 </div>
                 
 
@@ -372,15 +389,86 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="Install-Openshift-Cluster-on-AWS"><a href="#Install-Openshift-Cluster-on-AWS" class="headerlink" title="Install Openshift Cluster on AWS"></a>Install Openshift Cluster on AWS</h1><h6 id="tags-blog"><a href="#tags-blog" class="headerlink" title="tags: blog"></a>tags: <code>blog</code></h6><h2 id="Install-the-AWS-CLI-tools-Optional"><a href="#Install-the-AWS-CLI-tools-Optional" class="headerlink" title="Install the AWS CLI tools(Optional):"></a>Install the AWS CLI tools(Optional):</h2><h3 id="Download-the-latest-AWS-Command-Line-Interface"><a href="#Download-the-latest-AWS-Command-Line-Interface" class="headerlink" title="Download the latest AWS Command Line Interface"></a>Download the latest AWS Command Line Interface</h3><pre><code>sudo -i
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+unzip awscli-bundle.zip</code></pre><h3 id="Install-the-AWS-CLI-into-bin-aws"><a href="#Install-the-AWS-CLI-into-bin-aws" class="headerlink" title="Install the AWS CLI into /bin/aws"></a>Install the AWS CLI into /bin/aws</h3><p><code>./awscli-bundle/install -i /usr/local/aws -b /bin/aws</code></p>
+<h3 id="Validate-the-AWS-CLI-works"><a href="#Validate-the-AWS-CLI-works" class="headerlink" title="Validate the AWS CLI works"></a>Validate the AWS CLI works</h3><p><code>aws --version</code></p>
+<h3 id="Clean-up-downloaded-files"><a href="#Clean-up-downloaded-files" class="headerlink" title="Clean up downloaded files"></a>Clean up downloaded files</h3><p><code>rm -rf /root/awscli-bundle /root/awscli-bundle.zip</code></p>
+<h2 id="Preparation-before-Run-OpenShift-Installer"><a href="#Preparation-before-Run-OpenShift-Installer" class="headerlink" title="Preparation before Run OpenShift Installer:"></a>Preparation before Run OpenShift Installer:</h2><h3 id="Get-the-OpenShift-installer-binary"><a href="#Get-the-OpenShift-installer-binary" class="headerlink" title="Get the OpenShift installer binary:"></a>Get the OpenShift installer binary:</h3><pre><code>OCP_VERSION=4.4.3
+wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OCP_VERSION}/openshift-install-linux-${OCP_VERSION}.tar.gz
+tar zxvf openshift-install-linux-${OCP_VERSION}.tar.gz -C /usr/bin
+rm -f openshift-install-linux-${OCP_VERSION}.tar.gz /usr/bin/README.md
+chmod +x /usr/bin/openshift-install</code></pre><h3 id="Get-the-oc-CLI-tool"><a href="#Get-the-oc-CLI-tool" class="headerlink" title="Get the oc CLI tool:"></a>Get the oc CLI tool:</h3><pre><code>wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OCP_VERSION}/openshift-client-linux-${OCP_VERSION}.tar.gz
+tar zxvf openshift-client-linux-${OCP_VERSION}.tar.gz -C /usr/bin
+rm -f openshift-client-linux-${OCP_VERSION}.tar.gz /usr/bin/README.md
+chmod +x /usr/bin/oc</code></pre><h3 id="Check-that-the-OpenShift-installer-and-CLI-are-in-usr-bin"><a href="#Check-that-the-OpenShift-installer-and-CLI-are-in-usr-bin" class="headerlink" title="Check that the OpenShift installer and CLI are in /usr/bin:"></a>Check that the OpenShift installer and CLI are in /usr/bin:</h3><p><code>ls -l /usr/bin/{oc,openshift-install}</code></p>
+<h3 id="Set-up-bash-completion-for-the-OpenShift-CLI"><a href="#Set-up-bash-completion-for-the-OpenShift-CLI" class="headerlink" title="Set up bash completion for the OpenShift CLI:"></a>Set up bash completion for the OpenShift CLI:</h3><p><code>oc completion bash &gt;/etc/bash_completion.d/openshift</code></p>
+<h3 id="Exit-the-super-mode-or-ctrl-D"><a href="#Exit-the-super-mode-or-ctrl-D" class="headerlink" title="Exit the super mode or ctrl+D"></a>Exit the super mode or ctrl+D</h3><p><code>exit</code></p>
+<h3 id="Save-your-provided-AWS-credentials-to-the-HOME-aws-credentials-file"><a href="#Save-your-provided-AWS-credentials-to-the-HOME-aws-credentials-file" class="headerlink" title="Save your provided AWS credentials to the $HOME/.aws/credentials file"></a>Save your provided AWS credentials to the $HOME/.aws/credentials file</h3><pre><code>export AWSKEY=&lt;YOURACCESSKEY&gt;
+export AWSSECRETKEY=&lt;YOURSECRETKEY&gt;
+export REGION=us-east-2
+mkdir $HOME/.aws
+cat &lt;&lt; EOF &gt;&gt;  $HOME/.aws/credentials
+[User name]
+aws_access_key_id = ${AWSKEY}
+aws_secret_access_key = ${AWSSECRETKEY}
+region = $REGION
+EOF</code></pre><h3 id="Check-your-credentials-work"><a href="#Check-your-credentials-work" class="headerlink" title="Check your credentials work:"></a>Check your credentials work:</h3><p><code>aws sts get-caller-identity</code></p>
+<h3 id="Copy-pull-secret"><a href="#Copy-pull-secret" class="headerlink" title="Copy pull secret:"></a>Copy pull secret:</h3><ul>
+<li>go to <a href="https://www.openshift.com/try" target="_blank" rel="noopener">https://www.openshift.com/try</a></li>
+<li>Click Create your Own Cluster and then Try it in the cloud</li>
+<li>For Infrastructure Provider, click <code>AWS</code></li>
+<li>Click Installer-Provisioned-Infrastructure</li>
+<li>Copy Pull Secret<h3 id="Double-check"><a href="#Double-check" class="headerlink" title="Double check"></a>Double check</h3>pull secret contains credentials for all three container registries: quay.io, registry.connect.redhat.com, and registry.redhat.io as well as cloud.openshift.com.</li>
+</ul>
+<h3 id="Create-an-SSH-keypair-for-your-OpenShift-environment"><a href="#Create-an-SSH-keypair-for-your-OpenShift-environment" class="headerlink" title="Create an SSH keypair for your OpenShift environment:"></a>Create an SSH keypair for your OpenShift environment:</h3><p><code>ssh-keygen -f ~/.ssh/cluster-${GUID}-key -N</code></p>
+<h2 id="Install-OpenShift-Container-Platform"><a href="#Install-OpenShift-Container-Platform" class="headerlink" title="Install OpenShift Container Platform:"></a>Install OpenShift Container Platform:</h2><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>The main assets generated by the installer are the Ignition configs for the bootstrap, master, and worker machines. Given these three configs (and correctly configured infrastructure), it is possible to start an OpenShift cluster. The process for bootstrapping a cluster looks like the following:</p>
+<ul>
+<li><p>The bootstrap machine boots and starts hosting the remote resources required for the master machines to boot.</p>
+</li>
+<li><p>The master machines fetch the remote resources from the bootstrap machine and finish booting.</p>
+</li>
+<li><p>The master machines use the bootstrap node to form an etcd cluster.</p>
+</li>
+<li><p>The bootstrap node starts a temporary Kubernetes control plane using the newly created etcd cluster.</p>
+</li>
+<li><p>The temporary control plane schedules the production control plane to the master machines.</p>
+</li>
+<li><p>The temporary control plane shuts down, yielding to the production control plane.</p>
+</li>
+<li><p>The bootstrap node injects OpenShift-specific components into the newly formed control plane.</p>
+</li>
+<li><p>The installer then tears down the bootstrap node.</p>
+</li>
+<li><p>The result of this bootstrapping process is a fully running OpenShift cluster. The cluster will then download and configure the remaining components needed for day-to-day operation, including the creation of worker machines on supported platforms.</p>
+</li>
+<li><p>The installer uses a wizard approach, asking a few questions about the environment before executing the installation. If you want to avoid the wizard or run the installer from a shell script, it is useful to set up environment variables for a particular cloud platform.</p>
+</li>
+</ul>
+<h3 id="Run-OpenShift-Installer"><a href="#Run-OpenShift-Installer" class="headerlink" title="Run OpenShift Installer"></a>Run OpenShift Installer</h3><pre><code>openshift-install create cluster --dir $HOME/cluster-${GUID}
+
+? SSH Public Key /home/&lt;OpenTLC User&gt;/.ssh/cluster-&lt;GUID&gt;-key.pub
+? Platform aws
+INFO Credentials loaded from the "default" profile in file "/home/&lt;OpenTLC User&gt;/.aws/credentials"
+? Region us-east-2 (Ohio)
+? Base Domain sandboxNNN.opentlc.com
+? Cluster Name cluster-&lt;GUID&gt;
+? Pull Secret [? for help] ***************************************************************************************************************************************************************</code></pre><h3 id="Custom"><a href="#Custom" class="headerlink" title="Custom"></a>Custom</h3><p>It is possible to run a multi-step installation.</p>
+<p>Create the installation configuration:<br><code>openshift-install create install-config --dir $HOME/cluster-${GUID}</code></p>
+<p>Update the generated install-config.yaml file—for example, change the AWS EC2 instance types.</p>
+<p>Create the YAML manifests:<br>`openshift-install create manifests –dir $HOME/cluster-${GUID}``</p>
+<p>Create the Ignition configuration files:<br><code>openshift-install create ignition-configs --dir $HOME/cluster-${GUID}</code></p>
+<p>Install the cluster:<br><code>openshift-install create cluster --dir $HOME/cluster-${GUID}</code></p>
+<p>To delete the cluster, use:<br><code>openshift-install destroy cluster --dir $HOME/cluster-${GUID}</code></p>
+<p>Validate Cluster</p>
+<pre><code>Set up the CLI
+export KUBECONFIG=$HOME/cluster-${GUID}/auth/kubeconfig
+echo "export KUBECONFIG=$HOME/cluster-${GUID}/auth/kubeconfig" &gt;&gt;$HOME/.bashrc
+oc whoami oc get nodes oc get pod -A
+Clean Up Cluster (Reference)</code></pre><p>Delete the cluster:<br><code>openshift-install destroy cluster --dir $HOME/cluster-${GUID}</code></p>
+<p>Delete all of the files created by the OpenShift installer:</p>
+<pre><code>rm -rf $HOME/.kube
+rm -rf $HOME/cluster-${GUID}</code></pre><p>Ref:<br><a href="https://github.com/openshift/installer/blob/master/docs/user/aws/README.md" target="_blank" rel="noopener">https://github.com/openshift/installer/blob/master/docs/user/aws/README.md</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -424,7 +512,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bh7cw.github.io/2020/07/12/hello-world/">https://bh7cw.github.io/2020/07/12/hello-world/</a>
+                    <a href="https://bh7cw.github.io/2020/07/12/install-openshift-cluster-on-aws/">https://bh7cw.github.io/2020/07/12/install-openshift-cluster-on-aws/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -461,7 +549,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Openshift/">
+                                    <span class="chip bg-color">Openshift</span>
+                                </a>
+                            
+                                <a href="/tags/AWS/">
+                                    <span class="chip bg-color">AWS</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -504,7 +600,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-07-12T10-48-36',
+        id: '2020-07-12T20-27-08',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -528,7 +624,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sun Jul 12 2020 10:48:36 GMT-0400',
+    id: 'Sun Jul 12 2020 20:27:08 GMT-0400',
     owner: '',
     repo: '',
     oauth: {
@@ -553,9 +649,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://bh7cw.github.io/2020/07/12/hello-world/';
-        this.page.identifier = '/2020/07/12/hello-world/';
-        this.page.title = 'Hello World';
+        this.page.url = 'https://bh7cw.github.io/2020/07/12/install-openshift-cluster-on-aws/';
+        this.page.identifier = '/2020/07/12/install-openshift-cluster-on-aws/';
+        this.page.title = 'Install Openshift Cluster on AWS';
     };
     let disqus_shortname = '';
 
@@ -581,9 +677,10 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/07/12/install-openshift-cluster-on-aws/">
                     <div class="card-image">
@@ -601,9 +698,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -616,6 +713,7 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -635,7 +733,7 @@ gitment.render('gitment-content');
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/07/12/hello-world/">
@@ -665,7 +763,6 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
