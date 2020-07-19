@@ -4,11 +4,30 @@
   
     
     <entry>
-      <title>Hack on Fedora on AWS EC2</title>
+      <title>Hello World</title>
+      <link href="/2020/07/19/hello-world/"/>
+      <url>/2020/07/19/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hack on Fedora CoreOS on AWS EC2</title>
       <link href="/2020/07/13/hack-on-fedora-on-aws-ec2/"/>
       <url>/2020/07/13/hack-on-fedora-on-aws-ec2/</url>
       
-        <content type="html"><![CDATA[<h2 id="Build-image-with-COSA"><a href="#Build-image-with-COSA" class="headerlink" title="Build image with COSA"></a>Build image with COSA</h2><pre><code>chmod +x ./cosa &amp;&amp; ./cosacosa init https://github.com/coreos/fedora-coreos-config.gitcosa fetchcosa buildcosa buildextend-aws --upload</code></pre><hr><h2 id="Upload-vmdk-file-to-s3"><a href="#Upload-vmdk-file-to-s3" class="headerlink" title="Upload vmdk file to s3"></a>Upload vmdk file to s3</h2><p>upload built latest fedora image toS3<br><del>(commands tbd)</del></p><h2 id="Import-Snapshot"><a href="#Import-Snapshot" class="headerlink" title="Import Snapshot"></a>Import Snapshot</h2><p><code>aws ec2 import-snapshot --description "My dev fcos" --disk-container="file://{fcosdir}/buildfcos/fcos.json"</code></p><h2 id="Check-Status"><a href="#Check-Status" class="headerlink" title="Check Status"></a>Check Status</h2><p><code>aws ec2 describe-import-snapshot-tasks --import-task-ids import-snap-1234567890abcdef0</code></p><h2 id="Create-Image"><a href="#Create-Image" class="headerlink" title="Create Image"></a>Create Image</h2><p>Create Snapshot<br>Ref:<br><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot" target="_blank" rel="noopener">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot</a></p><h2 id="Register-Image"><a href="#Register-Image" class="headerlink" title="Register Image"></a>Register Image</h2><p>AMIs: Register new AMI<br><del>(commands tbc)</del><br>aws ec2 register-image –image-location fcos20200610/fedora-coreos-32.20200611.dev.0-aws.x86_64.vmdk –name “MyFCOS”</p><h2 id="launch-ec2-instance"><a href="#launch-ec2-instance" class="headerlink" title="launch ec2 instance"></a>launch ec2 instance</h2><p>Chose the created image to build ec2 instance.</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h2 id="Build-image-with-COSA"><a href="#Build-image-with-COSA" class="headerlink" title="Build image with COSA"></a>Build image with COSA</h2><pre><code>chmod +x ./cosa &amp;&amp; ./cosacosa init https://github.com/coreos/fedora-coreos-config.gitcosa fetchcosa buildcosa buildextend-aws --upload</code></pre><hr><h2 id="Upload-vmdk-file-to-s3"><a href="#Upload-vmdk-file-to-s3" class="headerlink" title="Upload vmdk file to s3"></a>Upload vmdk file to s3</h2><p>upload built latest fedora coreos image to S3<br>create a s3 bucket name “images” manually<br><code>aws s3 cp rhcos.raw s3://images</code></p><h2 id="Import-Snapshot"><a href="#Import-Snapshot" class="headerlink" title="Import Snapshot"></a>Import Snapshot</h2><p><code>aws ec2 import-snapshot --description "My dev fcos" --disk-container="file://{fcosdir}/buildfcos/fcos.json"</code></p><h2 id="Check-Status"><a href="#Check-Status" class="headerlink" title="Check Status"></a>Check Status</h2><p><code>aws ec2 describe-import-snapshot-tasks --import-task-ids import-snap-1234567890abcdef0</code></p><h2 id="Create-Image"><a href="#Create-Image" class="headerlink" title="Create Image"></a>Create Image</h2><p>Create Snapshot<br>Ref:<br><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot" target="_blank" rel="noopener">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot</a></p><h2 id="Register-Image"><a href="#Register-Image" class="headerlink" title="Register Image"></a>Register Image</h2><p>AMIs: Register new AMI<br><del>(commands tbc)</del><br>aws ec2 register-image –image-location fcos20200610/fedora-coreos-32.20200611.dev.0-aws.x86_64.vmdk –name “MyFCOS”</p><h2 id="launch-ec2-instance"><a href="#launch-ec2-instance" class="headerlink" title="launch ec2 instance"></a>launch ec2 instance</h2><p>Chose the created image to build ec2 instance.</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
@@ -22,30 +41,11 @@
             
             <tag> AWS </tag>
             
-            <tag> Fedora </tag>
+            <tag> Fedora CoreOS </tag>
             
             <tag> CoreOS Assembler </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2020/07/13/hello-world/"/>
-      <url>/2020/07/13/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> Markdown </category>
-          
-      </categories>
-      
       
     </entry>
     

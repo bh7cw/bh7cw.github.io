@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hack on Fedora on AWS EC2, Rust, Golang, Java, Linux, Opensource, HAM">
+    <meta name="keywords" content="Hack on Fedora CoreOS on AWS EC2, Rust, Golang, Java, Linux, Opensource, HAM">
     <meta name="description" content="enjoy your life">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hack on Fedora on AWS EC2 | bh7cw</title>
+    <title>Hack on Fedora CoreOS on AWS EC2 | bh7cw</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -202,12 +202,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hack on Fedora on AWS EC2</h1>
+                    <h1 class="description center-align post-title">Hack on Fedora CoreOS on AWS EC2</h1>
                 </div>
             </div>
         </div>
@@ -328,8 +328,8 @@
                                 <span class="chip bg-color">AWS</span>
                             </a>
                         
-                            <a href="/tags/Fedora/">
-                                <span class="chip bg-color">Fedora</span>
+                            <a href="/tags/Fedora-CoreOS/">
+                                <span class="chip bg-color">Fedora CoreOS</span>
                             </a>
                         
                             <a href="/tags/CoreOS-Assembler/">
@@ -364,14 +364,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-07-13
+                    2020-07-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    176
+                    188
                 </div>
                 
 
@@ -398,7 +398,7 @@ cosa init https://github.com/coreos/fedora-coreos-config.git
 cosa fetch
 cosa build
 cosa buildextend-aws --upload</code></pre><hr>
-<h2 id="Upload-vmdk-file-to-s3"><a href="#Upload-vmdk-file-to-s3" class="headerlink" title="Upload vmdk file to s3"></a>Upload vmdk file to s3</h2><p>upload built latest fedora image toS3<br><del>(commands tbd)</del></p>
+<h2 id="Upload-vmdk-file-to-s3"><a href="#Upload-vmdk-file-to-s3" class="headerlink" title="Upload vmdk file to s3"></a>Upload vmdk file to s3</h2><p>upload built latest fedora coreos image to S3<br>create a s3 bucket name “images” manually<br><code>aws s3 cp rhcos.raw s3://images</code></p>
 <h2 id="Import-Snapshot"><a href="#Import-Snapshot" class="headerlink" title="Import Snapshot"></a>Import Snapshot</h2><p><code>aws ec2 import-snapshot --description "My dev fcos" --disk-container="file://{fcosdir}/buildfcos/fcos.json"</code></p>
 <h2 id="Check-Status"><a href="#Check-Status" class="headerlink" title="Check Status"></a>Check Status</h2><p><code>aws ec2 describe-import-snapshot-tasks --import-task-ids import-snap-1234567890abcdef0</code></p>
 <h2 id="Create-Image"><a href="#Create-Image" class="headerlink" title="Create Image"></a>Create Image</h2><p>Create Snapshot<br>Ref:<br><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot" target="_blank" rel="noopener">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot</a></p>
@@ -489,8 +489,8 @@ cosa buildextend-aws --upload</code></pre><hr>
                                     <span class="chip bg-color">AWS</span>
                                 </a>
                             
-                                <a href="/tags/Fedora/">
-                                    <span class="chip bg-color">Fedora</span>
+                                <a href="/tags/Fedora-CoreOS/">
+                                    <span class="chip bg-color">Fedora CoreOS</span>
                                 </a>
                             
                                 <a href="/tags/CoreOS-Assembler/">
@@ -536,70 +536,11 @@ cosa buildextend-aws --upload</code></pre><hr>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
-            <div class="card">
-                <a href="/2020/07/13/hack-on-fedora-on-aws-ec2/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Hack on Fedora on AWS EC2">
-                        
-                        <span class="card-title">Hack on Fedora on AWS EC2</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            This post concludes building Fedora image with COSA on AWS EC2.
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-13
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/AWS/">
-                        <span class="chip bg-color">AWS</span>
-                    </a>
-                    
-                    <a href="/tags/Fedora/">
-                        <span class="chip bg-color">Fedora</span>
-                    </a>
-                    
-                    <a href="/tags/CoreOS-Assembler/">
-                        <span class="chip bg-color">CoreOS Assembler</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/07/13/hello-world/">
+                <a href="/2020/07/19/hello-world/">
                     <div class="card-image">
                         
                         
@@ -616,8 +557,49 @@ Quick StartCreate a new post$ hexo new
                         
                     </div>
                     <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-19
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/07/12/install-openshift-cluster-on-aws/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Install Openshift Cluster on AWS">
+                        
+                        <span class="card-title">Install Openshift Cluster on AWS</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            This post includes steps to install openshift cluster on aws.
+                        
+                    </div>
+                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-12
                             </span>
                         <span class="publish-author">
                             
@@ -630,6 +612,18 @@ Quick StartCreate a new post$ hexo new
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Openshift/">
+                        <span class="chip bg-color">Openshift</span>
+                    </a>
+                    
+                    <a href="/tags/AWS/">
+                        <span class="chip bg-color">AWS</span>
+                    </a>
+                    
                 </div>
                 
             </div>
