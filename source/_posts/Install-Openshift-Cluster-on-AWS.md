@@ -1,13 +1,13 @@
 ---
 title: Install Openshift Cluster on AWS
-date: 2020-07-12 20:27:08
+date: 2020-07-14 20:27:08
 author: bh7cw
 top: true
 cover: true
 coverImg: /images/1.jpg
 toc: true
 summary: This post includes steps to install openshift cluster on aws.
-categories: Markdown
+categories: Openshift
 tags:
   - Openshift
   - AWS
