@@ -64,11 +64,66 @@
       <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
     
     
-      <category term="AWS" scheme="https://bh7cw.github.io/tags/AWS/"/>
-    
       <category term="Fedora CoreOS" scheme="https://bh7cw.github.io/tags/Fedora-CoreOS/"/>
     
       <category term="CoreOS Assembler" scheme="https://bh7cw.github.io/tags/CoreOS-Assembler/"/>
+    
+      <category term="AWS" scheme="https://bh7cw.github.io/tags/AWS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github practical skills</title>
+    <link href="https://bh7cw.github.io/2020/07/13/github-practical-skills/"/>
+    <id>https://bh7cw.github.io/2020/07/13/github-practical-skills/</id>
+    <published>2020-07-13T22:33:49.000Z</published>
+    <updated>2020-08-06T21:42:05.262Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;set-up-Github&quot;&gt;&lt;a href=&quot;#set-up-Github&quot; class=&quot;headerlink&quot; title=&quot;set up Github&quot;&gt;&lt;/a&gt;set up Github&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;edit
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
+    
+    
+      <category term="Github" scheme="https://bh7cw.github.io/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux Commands</title>
+    <link href="https://bh7cw.github.io/2020/07/13/linux-commands/"/>
+    <id>https://bh7cw.github.io/2020/07/13/linux-commands/</id>
+    <published>2020-07-13T22:33:49.000Z</published>
+    <updated>2020-08-06T21:43:44.822Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;grep&quot;&gt;&lt;a href=&quot;#grep&quot; class=&quot;headerlink&quot; title=&quot;grep&quot;&gt;&lt;/a&gt;grep&lt;/h2&gt;&lt;p&gt;search for pattern in filename&lt;br&gt;&lt;code&gt;grep pattern
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
+    
+    
+      <category term="Linux" scheme="https://bh7cw.github.io/tags/Linux/"/>
     
   </entry>
   
@@ -95,9 +150,9 @@
       <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
     
     
-      <category term="Openshift" scheme="https://bh7cw.github.io/tags/Openshift/"/>
-    
       <category term="AWS" scheme="https://bh7cw.github.io/tags/AWS/"/>
+    
+      <category term="Openshift" scheme="https://bh7cw.github.io/tags/Openshift/"/>
     
   </entry>
   

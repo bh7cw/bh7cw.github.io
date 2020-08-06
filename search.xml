@@ -39,11 +39,61 @@
       
         <tags>
             
-            <tag> AWS </tag>
-            
             <tag> Fedora CoreOS </tag>
             
             <tag> CoreOS Assembler </tag>
+            
+            <tag> AWS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Github practical skills</title>
+      <link href="/2020/07/13/github-practical-skills/"/>
+      <url>/2020/07/13/github-practical-skills/</url>
+      
+        <content type="html"><![CDATA[<h2 id="set-up-Github"><a href="#set-up-Github" class="headerlink" title="set up Github"></a>set up Github</h2><ul><li>edit <code>.gitconfig</code>:<pre><code>[user]      email = myemail      name = myname[credential "https://github.com"]      username = myusername      helper = store</code></pre></li><li>edit <code>.git-credentials</code>:<pre><code>https://&lt;YOU&gt;:&lt;TOKEN&gt;@github.com</code></pre><h2 id="basic-steps"><a href="#basic-steps" class="headerlink" title="basic steps"></a>basic steps</h2><pre><code>git clone gitrepogit statusgit add . #add allgit add hello/* #Git add to subdirectorygit commit -m "commit message"git pull origin mastergit push origin master</code></pre><h2 id="set-remote-branches"><a href="#set-remote-branches" class="headerlink" title="set remote branches"></a>set remote branches</h2>After fork a repository, we can set the push url, so we can push to our repo and pull from the orginal repo.<br>check the remote branches:<br><code>git remote -v</code><br>set the push url:<br><code>git remote set-url --push origin mmyrepo</code><br>Check set correctly:<br><code>git remote -v</code></li></ul><h2 id="rebase"><a href="#rebase" class="headerlink" title="rebase"></a>rebase</h2><p>Before submit PR, it’s always good to rebase and squash all the commits into one commit, so it’s more convenient to be reviewed.<br><code>git rebase -i HEAD~8</code> #combine the last 8 commits as one commit<br>use editor, like vim to edit:<br>  :i -&gt; edit the rebase, pick the first one, and s the left<br>  :wq -&gt; save and exit<br>keep those commits message to <code>rebase</code>, and others to <code>squash</code> or <code>s</code><br>If we didn’t get into the commit message automatically, we can continue:<br><code>git rebase --continue</code><br>  :i -&gt; edit the whole commit mesage<br>  :wq -&gt; save and exit<br>Keep those required message.<br>If we want to abort:<br><code>git rebase --abort</code></p><h2 id="Discard-all-local-changes"><a href="#Discard-all-local-changes" class="headerlink" title="Discard all local changes"></a>Discard all local changes</h2><p>Discard all local changes, but save them for possible re-use later: <code>git stash</code><br>Discarding local changes (permanently) to a file:<br><code>git checkout -- &lt;file&gt;</code><br>Discard all local changes to all files permanently:<br><code>git reset --hard</code></p><h2 id="Sync-forked-repo-to-update"><a href="#Sync-forked-repo-to-update" class="headerlink" title="Sync forked repo to update"></a>Sync forked repo to update</h2><p>If forked repo is behind the orginal repo, we need to sync:</p><pre><code>git remote add upstream https://github.com/upstream/repo.gitgit pull --rebase upstream mastergit push --force-with-lease origin master</code></pre><h2 id="amend-commits"><a href="#amend-commits" class="headerlink" title="amend commits"></a>amend commits</h2><p>If we need to amend our commits:<br><code>git commit --amend</code></p><p>Update more later.</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux Commands</title>
+      <link href="/2020/07/13/linux-commands/"/>
+      <url>/2020/07/13/linux-commands/</url>
+      
+        <content type="html"><![CDATA[<h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><p>search for pattern in filename<br><code>grep pattern filename</code><br>-i: captial insensitive<br>-r: search all the file in the directory<br><code>grep -r admin /etc/</code></p><h2 id="wc"><a href="#wc" class="headerlink" title="wc"></a>wc</h2><pre><code>$ wc demo.txt7459   15915  398400 demo.txtlines  words  bytes行数    单词数  字符数    </code></pre><h2 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h2><p><code>sed 's/ /-/g' example.txt</code><br>replace all the <code>space</code> with <code>-</code><br>Hello This is a Test 1 2 3 4 -&gt; Hello-This-is-a-Test-1-2-3-4</p><p><code>sed 's/[0-9]/d/g' example.txt</code><br>replace all the numbers with <code>d</code><br>Hello This is a Test 1 2 3 4 -&gt; Hello This is a Test d d d d</p><h2 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h2><p><code>sort example.txt</code><br>example.txt</p><pre><code>fbcgaed</code></pre><p>sort example.txt</p><pre><code>abcdefg</code></pre><p><code>sort example.txt | sort -R</code> randomly<br><code>sort example.txt | uniq</code> show unique lines<br><code>sort example.txt | uniq -c</code> show unique lines and times</p><h2 id="cut"><a href="#cut" class="headerlink" title="cut"></a>cut</h2><p><code>cut -d " " -f2,7,9 example.txt</code> show the 2,7,9 words connected with “ “<br>red riding hood went to the park to play -&gt; riding park play</p><h2 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h2><p><code>echo -ne "Hello\nWorld\n"</code><br>“\n” output<br>Hello<br>World</p><h2 id="fmt"><a href="#fmt" class="headerlink" title="fmt"></a>fmt</h2><p><code>cat example.txt | fmt -w 20</code>: print each line with 20 words</p><h2 id="tr"><a href="#tr" class="headerlink" title="tr"></a>tr</h2><p>cat example.txt | tr ‘a-z’ ‘A-Z’: change a-z -&gt; A-Z<br><code>cat example.txt | tr ' ' '\n'</code>: change ‘ ‘ -&gt; ‘\n’</p><h2 id="nl"><a href="#nl" class="headerlink" title="nl"></a>nl</h2><p><code>nl -s". " example.txt</code>show the number of line</p><pre><code> 1. Lorem ipsum 2. dolor sit amet, 3. consetetur 4. sadipscing elitr, 5. sed diam nonumy 6. eirmod tempor 7. invidunt ut labore 8. et dolore magna 9. aliquyam erat, sed10. diam voluptua. At11. vero eos et12. accusam et justo13. duo dolores et ea14. rebum. Stet clita15. kasd gubergren,16. no sea takimata17. sanctus est Lorem18. ipsum dolor sit19. amet.</code></pre><h2 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h2><p>change password</p><h2 id="date"><a href="#date" class="headerlink" title="date"></a>date</h2><p>show current date</p><h2 id="cal"><a href="#cal" class="headerlink" title="cal"></a>cal</h2><p>show the calendar for this month</p><h2 id="finger"><a href="#finger" class="headerlink" title="finger"></a>finger</h2><p><code>finger username</code> display the info of the user</p><h2 id="uptime"><a href="#uptime" class="headerlink" title="uptime"></a>uptime</h2><p>show the running time</p><h2 id="uname"><a href="#uname" class="headerlink" title="uname"></a>uname</h2><p><code>uname -a</code> show kernel info</p><h2 id="df"><a href="#df" class="headerlink" title="df"></a>df</h2><p>show usage of disk</p><h2 id="du"><a href="#du" class="headerlink" title="du"></a>du</h2><p><code>du filename</code> show the size of directory and file<br>-s: only show the total size</p><h2 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h2><p><code>ps -u yourusername</code> show the processes</p><h2 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h2><p><code>kill PID</code></p><h2 id="killall"><a href="#killall" class="headerlink" title="killall"></a>killall</h2><p><code>killall processname</code></p><h2 id="top"><a href="#top" class="headerlink" title="top"></a>top</h2><p>show current process</p><h2 id="bg"><a href="#bg" class="headerlink" title="bg"></a>bg</h2><h2 id="fg"><a href="#fg" class="headerlink" title="fg"></a>fg</h2><h2 id="dig"><a href="#dig" class="headerlink" title="dig"></a>dig</h2><p><code>dig domain</code> dig the info of the domain</p><h2 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h2><p><code>wget file</code> download the file</p><h2 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h2><pre><code>${varname:-word}    # 如果varname存在且不为null，则返回其值; 否则返回word${varname:=word}    # 如果varname存在且不为null，则返回其值;否则设置它，然后返回其值${varname:+word}    # 如果varname存在并且不为null，返回word; 否则返回null ${varname:offset:length}    # 执行子字符串扩展。它返回$ varname的子字符串，从offset开始，最多为length的字符2.2 String Substitution</code></pre><h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><pre><code>${variable#pattern}         # if the pattern matches the beginning of the variable's value, delete the shortest part that matches and return the rest${variable##pattern}        # if the pattern matches the beginning of the variable's value, delete the longest part that matches and return the rest${variable%pattern}         # if the pattern matches the end of the variable's value, delete the shortest part that matches and return the rest${variable%%pattern}        # if the pattern matches the end of the variable's value, delete the longest part that matches and return the rest${variable/pattern/string}  # the longest match to pattern in variable is replaced by string. Only the first match is replaced${variable//pattern/string} # the longest match to pattern in variable is replaced by string. All matches are replaced${#varname}     # returns the length of the value of the variable as a character string</code></pre><h2 id="expression"><a href="#expression" class="headerlink" title="expression"></a>expression</h2><pre><code>statement1 &amp;&amp; statement2  # 两边的条件都为truestatement1 || statement2  # 其中一边为truestr1=str2       # str1 匹配 str2str1!=str2      # str1 不匹配 str2str1&lt;str2       # str1 是否小于 str2str1&gt;str2       # str1 是否大于 str2-n str1         # str1 不为空(长度大于 0)-z str1         # str1 为空(长度为 0)-a file         # 文件存在 -d file         # 文件存在，是一个目录 -e file         # 文件存在; 相同的-a -f file         # 文件存在，是一个常规文件（即不是目录或其他特殊类型的文件） -r file         # 你有读权限 -r file         # 文件存在，不为空 -w file         # 你有写权限 -x file         # 你有文件的执行权限file1 -nt file2     # file1 is newer than file2file1 -ot file2     # file1 is older than file2-lt     # 小于 -le     # 小于或等于 -eq     # 等于-ge     # 大于或等于 -gt     # 大于-ne     # 不等于</code></pre><p>Ref:<br><a href="https://www.cnblogs.com/savorboard/p/bash-guide.html" target="_blank" rel="noopener">https://www.cnblogs.com/savorboard/p/bash-guide.html</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -68,9 +118,9 @@
       
         <tags>
             
-            <tag> Openshift </tag>
-            
             <tag> AWS </tag>
+            
+            <tag> Openshift </tag>
             
         </tags>
       

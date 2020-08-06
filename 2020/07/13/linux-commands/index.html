@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Install Openshift Cluster on AWS, Rust, Golang, Java, Linux, Opensource, HAM">
+    <meta name="keywords" content="Linux Commands, Rust, Golang, Java, Linux, Opensource, HAM">
     <meta name="description" content="enjoy your life">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Install Openshift Cluster on AWS | bh7cw</title>
+    <title>Linux Commands | bh7cw</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -202,12 +202,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Install Openshift Cluster on AWS</h1>
+                    <h1 class="description center-align post-title">Linux Commands</h1>
                 </div>
             </div>
         </div>
@@ -324,12 +324,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/AWS/">
-                                <span class="chip bg-color">AWS</span>
-                            </a>
-                        
-                            <a href="/tags/Openshift/">
-                                <span class="chip bg-color">Openshift</span>
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
                             </a>
                         
                     </div>
@@ -353,28 +349,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-07-12
+                    2020-07-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-07-12
+                    2020-08-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    856
+                    865
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    5 Min
+                    4 Min
                 </div>
                 
 
@@ -389,86 +385,102 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Install-Openshift-Cluster-on-AWS"><a href="#Install-Openshift-Cluster-on-AWS" class="headerlink" title="Install Openshift Cluster on AWS"></a>Install Openshift Cluster on AWS</h1><h2 id="Install-the-AWS-CLI-tools-Optional"><a href="#Install-the-AWS-CLI-tools-Optional" class="headerlink" title="Install the AWS CLI tools(Optional):"></a>Install the AWS CLI tools(Optional):</h2><h3 id="Download-the-latest-AWS-Command-Line-Interface"><a href="#Download-the-latest-AWS-Command-Line-Interface" class="headerlink" title="Download the latest AWS Command Line Interface"></a>Download the latest AWS Command Line Interface</h3><pre><code>sudo -i
-curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
-unzip awscli-bundle.zip</code></pre><h3 id="Install-the-AWS-CLI-into-bin-aws"><a href="#Install-the-AWS-CLI-into-bin-aws" class="headerlink" title="Install the AWS CLI into /bin/aws"></a>Install the AWS CLI into /bin/aws</h3><p><code>./awscli-bundle/install -i /usr/local/aws -b /bin/aws</code></p>
-<h3 id="Validate-the-AWS-CLI-works"><a href="#Validate-the-AWS-CLI-works" class="headerlink" title="Validate the AWS CLI works"></a>Validate the AWS CLI works</h3><p><code>aws --version</code></p>
-<h3 id="Clean-up-downloaded-files"><a href="#Clean-up-downloaded-files" class="headerlink" title="Clean up downloaded files"></a>Clean up downloaded files</h3><p><code>rm -rf /root/awscli-bundle /root/awscli-bundle.zip</code></p>
-<h2 id="Preparation-before-Run-OpenShift-Installer"><a href="#Preparation-before-Run-OpenShift-Installer" class="headerlink" title="Preparation before Run OpenShift Installer:"></a>Preparation before Run OpenShift Installer:</h2><h3 id="Get-the-OpenShift-installer-binary"><a href="#Get-the-OpenShift-installer-binary" class="headerlink" title="Get the OpenShift installer binary:"></a>Get the OpenShift installer binary:</h3><pre><code>OCP_VERSION=4.4.3
-wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OCP_VERSION}/openshift-install-linux-${OCP_VERSION}.tar.gz
-tar zxvf openshift-install-linux-${OCP_VERSION}.tar.gz -C /usr/bin
-rm -f openshift-install-linux-${OCP_VERSION}.tar.gz /usr/bin/README.md
-chmod +x /usr/bin/openshift-install</code></pre><h3 id="Get-the-oc-CLI-tool"><a href="#Get-the-oc-CLI-tool" class="headerlink" title="Get the oc CLI tool:"></a>Get the oc CLI tool:</h3><pre><code>wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OCP_VERSION}/openshift-client-linux-${OCP_VERSION}.tar.gz
-tar zxvf openshift-client-linux-${OCP_VERSION}.tar.gz -C /usr/bin
-rm -f openshift-client-linux-${OCP_VERSION}.tar.gz /usr/bin/README.md
-chmod +x /usr/bin/oc</code></pre><h3 id="Check-that-the-OpenShift-installer-and-CLI-are-in-usr-bin"><a href="#Check-that-the-OpenShift-installer-and-CLI-are-in-usr-bin" class="headerlink" title="Check that the OpenShift installer and CLI are in /usr/bin:"></a>Check that the OpenShift installer and CLI are in /usr/bin:</h3><p><code>ls -l /usr/bin/{oc,openshift-install}</code></p>
-<h3 id="Set-up-bash-completion-for-the-OpenShift-CLI"><a href="#Set-up-bash-completion-for-the-OpenShift-CLI" class="headerlink" title="Set up bash completion for the OpenShift CLI:"></a>Set up bash completion for the OpenShift CLI:</h3><p><code>oc completion bash &gt;/etc/bash_completion.d/openshift</code></p>
-<h3 id="Exit-the-super-mode-or-ctrl-D"><a href="#Exit-the-super-mode-or-ctrl-D" class="headerlink" title="Exit the super mode or ctrl+D"></a>Exit the super mode or ctrl+D</h3><p><code>exit</code></p>
-<h3 id="Save-your-provided-AWS-credentials-to-the-HOME-aws-credentials-file"><a href="#Save-your-provided-AWS-credentials-to-the-HOME-aws-credentials-file" class="headerlink" title="Save your provided AWS credentials to the $HOME/.aws/credentials file"></a>Save your provided AWS credentials to the $HOME/.aws/credentials file</h3><pre><code>export AWSKEY=&lt;YOURACCESSKEY&gt;
-export AWSSECRETKEY=&lt;YOURSECRETKEY&gt;
-export REGION=us-east-2
-mkdir $HOME/.aws
-cat &lt;&lt; EOF &gt;&gt;  $HOME/.aws/credentials
-[User name]
-aws_access_key_id = ${AWSKEY}
-aws_secret_access_key = ${AWSSECRETKEY}
-region = $REGION
-EOF</code></pre><h3 id="Check-your-credentials-work"><a href="#Check-your-credentials-work" class="headerlink" title="Check your credentials work:"></a>Check your credentials work:</h3><p><code>aws sts get-caller-identity</code></p>
-<h3 id="Copy-pull-secret"><a href="#Copy-pull-secret" class="headerlink" title="Copy pull secret:"></a>Copy pull secret:</h3><ul>
-<li>go to <a href="https://www.openshift.com/try" target="_blank" rel="noopener">https://www.openshift.com/try</a></li>
-<li>Click Create your Own Cluster and then Try it in the cloud</li>
-<li>For Infrastructure Provider, click <code>AWS</code></li>
-<li>Click Installer-Provisioned-Infrastructure</li>
-<li>Copy Pull Secret<h3 id="Double-check"><a href="#Double-check" class="headerlink" title="Double check"></a>Double check</h3>pull secret contains credentials for all three container registries: quay.io, registry.connect.redhat.com, and registry.redhat.io as well as cloud.openshift.com.</li>
-</ul>
-<h3 id="Create-an-SSH-keypair-for-your-OpenShift-environment"><a href="#Create-an-SSH-keypair-for-your-OpenShift-environment" class="headerlink" title="Create an SSH keypair for your OpenShift environment:"></a>Create an SSH keypair for your OpenShift environment:</h3><p><code>ssh-keygen -f ~/.ssh/cluster-${GUID}-key -N</code></p>
-<h2 id="Install-OpenShift-Container-Platform"><a href="#Install-OpenShift-Container-Platform" class="headerlink" title="Install OpenShift Container Platform:"></a>Install OpenShift Container Platform:</h2><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>The main assets generated by the installer are the Ignition configs for the bootstrap, master, and worker machines. Given these three configs (and correctly configured infrastructure), it is possible to start an OpenShift cluster. The process for bootstrapping a cluster looks like the following:</p>
-<ul>
-<li><p>The bootstrap machine boots and starts hosting the remote resources required for the master machines to boot.</p>
-</li>
-<li><p>The master machines fetch the remote resources from the bootstrap machine and finish booting.</p>
-</li>
-<li><p>The master machines use the bootstrap node to form an etcd cluster.</p>
-</li>
-<li><p>The bootstrap node starts a temporary Kubernetes control plane using the newly created etcd cluster.</p>
-</li>
-<li><p>The temporary control plane schedules the production control plane to the master machines.</p>
-</li>
-<li><p>The temporary control plane shuts down, yielding to the production control plane.</p>
-</li>
-<li><p>The bootstrap node injects OpenShift-specific components into the newly formed control plane.</p>
-</li>
-<li><p>The installer then tears down the bootstrap node.</p>
-</li>
-<li><p>The result of this bootstrapping process is a fully running OpenShift cluster. The cluster will then download and configure the remaining components needed for day-to-day operation, including the creation of worker machines on supported platforms.</p>
-</li>
-<li><p>The installer uses a wizard approach, asking a few questions about the environment before executing the installation. If you want to avoid the wizard or run the installer from a shell script, it is useful to set up environment variables for a particular cloud platform.</p>
-</li>
-</ul>
-<h3 id="Run-OpenShift-Installer"><a href="#Run-OpenShift-Installer" class="headerlink" title="Run OpenShift Installer"></a>Run OpenShift Installer</h3><pre><code>openshift-install create cluster --dir $HOME/cluster-${GUID}
+                <h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><p>search for pattern in filename<br><code>grep pattern filename</code><br>-i: captial insensitive<br>-r: search all the file in the directory<br><code>grep -r admin /etc/</code></p>
+<h2 id="wc"><a href="#wc" class="headerlink" title="wc"></a>wc</h2><pre><code>$ wc demo.txt
+7459   15915  398400 demo.txt
+lines  words  bytes
+行数    单词数  字符数    </code></pre><h2 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h2><p><code>sed 's/ /-/g' example.txt</code><br>replace all the <code>space</code> with <code>-</code><br>Hello This is a Test 1 2 3 4 -&gt; Hello-This-is-a-Test-1-2-3-4</p>
+<p><code>sed 's/[0-9]/d/g' example.txt</code><br>replace all the numbers with <code>d</code><br>Hello This is a Test 1 2 3 4 -&gt; Hello This is a Test d d d d</p>
+<h2 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h2><p><code>sort example.txt</code><br>example.txt</p>
+<pre><code>f
+b
+c
+g
+a
+e
+d</code></pre><p>sort example.txt</p>
+<pre><code>a
+b
+c
+d
+e
+f
+g</code></pre><p><code>sort example.txt | sort -R</code> randomly<br><code>sort example.txt | uniq</code> show unique lines<br><code>sort example.txt | uniq -c</code> show unique lines and times</p>
+<h2 id="cut"><a href="#cut" class="headerlink" title="cut"></a>cut</h2><p><code>cut -d " " -f2,7,9 example.txt</code> show the 2,7,9 words connected with “ “<br>red riding hood went to the park to play -&gt; riding park play</p>
+<h2 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h2><p><code>echo -ne "Hello\nWorld\n"</code><br>“\n” output<br>Hello<br>World</p>
+<h2 id="fmt"><a href="#fmt" class="headerlink" title="fmt"></a>fmt</h2><p><code>cat example.txt | fmt -w 20</code>: print each line with 20 words</p>
+<h2 id="tr"><a href="#tr" class="headerlink" title="tr"></a>tr</h2><p>cat example.txt | tr ‘a-z’ ‘A-Z’: change a-z -&gt; A-Z<br><code>cat example.txt | tr ' ' '\n'</code>: change ‘ ‘ -&gt; ‘\n’</p>
+<h2 id="nl"><a href="#nl" class="headerlink" title="nl"></a>nl</h2><p><code>nl -s". " example.txt</code>show the number of line</p>
+<pre><code> 1. Lorem ipsum
+ 2. dolor sit amet,
+ 3. consetetur
+ 4. sadipscing elitr,
+ 5. sed diam nonumy
+ 6. eirmod tempor
+ 7. invidunt ut labore
+ 8. et dolore magna
+ 9. aliquyam erat, sed
+10. diam voluptua. At
+11. vero eos et
+12. accusam et justo
+13. duo dolores et ea
+14. rebum. Stet clita
+15. kasd gubergren,
+16. no sea takimata
+17. sanctus est Lorem
+18. ipsum dolor sit
+19. amet.</code></pre><h2 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h2><p>change password</p>
+<h2 id="date"><a href="#date" class="headerlink" title="date"></a>date</h2><p>show current date</p>
+<h2 id="cal"><a href="#cal" class="headerlink" title="cal"></a>cal</h2><p>show the calendar for this month</p>
+<h2 id="finger"><a href="#finger" class="headerlink" title="finger"></a>finger</h2><p><code>finger username</code> display the info of the user</p>
+<h2 id="uptime"><a href="#uptime" class="headerlink" title="uptime"></a>uptime</h2><p>show the running time</p>
+<h2 id="uname"><a href="#uname" class="headerlink" title="uname"></a>uname</h2><p><code>uname -a</code> show kernel info</p>
+<h2 id="df"><a href="#df" class="headerlink" title="df"></a>df</h2><p>show usage of disk</p>
+<h2 id="du"><a href="#du" class="headerlink" title="du"></a>du</h2><p><code>du filename</code> show the size of directory and file<br>-s: only show the total size</p>
+<h2 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h2><p><code>ps -u yourusername</code> show the processes</p>
+<h2 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h2><p><code>kill PID</code></p>
+<h2 id="killall"><a href="#killall" class="headerlink" title="killall"></a>killall</h2><p><code>killall processname</code></p>
+<h2 id="top"><a href="#top" class="headerlink" title="top"></a>top</h2><p>show current process</p>
+<h2 id="bg"><a href="#bg" class="headerlink" title="bg"></a>bg</h2><h2 id="fg"><a href="#fg" class="headerlink" title="fg"></a>fg</h2><h2 id="dig"><a href="#dig" class="headerlink" title="dig"></a>dig</h2><p><code>dig domain</code> dig the info of the domain</p>
+<h2 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h2><p><code>wget file</code> download the file</p>
+<h2 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h2><pre><code>${varname:-word}    # 如果varname存在且不为null，则返回其值; 否则返回word
+${varname:=word}    # 如果varname存在且不为null，则返回其值;否则设置它，然后返回其值
+${varname:+word}    # 如果varname存在并且不为null，返回word; 否则返回null 
+${varname:offset:length}    # 执行子字符串扩展。它返回$ varname的子字符串，从offset开始，最多为length的字符
+2.2 String Substitution</code></pre><h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><pre><code>${variable#pattern}         # if the pattern matches the beginning of the variable's value, delete the shortest part that matches and return the rest
+${variable##pattern}        # if the pattern matches the beginning of the variable's value, delete the longest part that matches and return the rest
+${variable%pattern}         # if the pattern matches the end of the variable's value, delete the shortest part that matches and return the rest
+${variable%%pattern}        # if the pattern matches the end of the variable's value, delete the longest part that matches and return the rest
+${variable/pattern/string}  # the longest match to pattern in variable is replaced by string. Only the first match is replaced
+${variable//pattern/string} # the longest match to pattern in variable is replaced by string. All matches are replaced
+${#varname}     # returns the length of the value of the variable as a character string</code></pre><h2 id="expression"><a href="#expression" class="headerlink" title="expression"></a>expression</h2><pre><code>statement1 &amp;&amp; statement2  # 两边的条件都为true
+statement1 || statement2  # 其中一边为true
 
-? SSH Public Key /home/&lt;OpenTLC User&gt;/.ssh/cluster-&lt;GUID&gt;-key.pub
-? Platform aws
-INFO Credentials loaded from the "default" profile in file "/home/&lt;OpenTLC User&gt;/.aws/credentials"
-? Region us-east-2 (Ohio)
-? Base Domain sandboxNNN.opentlc.com
-? Cluster Name cluster-&lt;GUID&gt;
-? Pull Secret [? for help] ***************************************************************************************************************************************************************</code></pre><h3 id="Custom"><a href="#Custom" class="headerlink" title="Custom"></a>Custom</h3><p>It is possible to run a multi-step installation.</p>
-<p>Create the installation configuration:<br><code>openshift-install create install-config --dir $HOME/cluster-${GUID}</code></p>
-<p>Update the generated install-config.yaml file—for example, change the AWS EC2 instance types.</p>
-<p>Create the YAML manifests:<br>`openshift-install create manifests –dir $HOME/cluster-${GUID}``</p>
-<p>Create the Ignition configuration files:<br><code>openshift-install create ignition-configs --dir $HOME/cluster-${GUID}</code></p>
-<p>Install the cluster:<br><code>openshift-install create cluster --dir $HOME/cluster-${GUID}</code></p>
-<p>To delete the cluster, use:<br><code>openshift-install destroy cluster --dir $HOME/cluster-${GUID}</code></p>
-<p>Validate Cluster</p>
-<pre><code>Set up the CLI
-export KUBECONFIG=$HOME/cluster-${GUID}/auth/kubeconfig
-echo "export KUBECONFIG=$HOME/cluster-${GUID}/auth/kubeconfig" &gt;&gt;$HOME/.bashrc
-oc whoami oc get nodes oc get pod -A
-Clean Up Cluster (Reference)</code></pre><p>Delete the cluster:<br><code>openshift-install destroy cluster --dir $HOME/cluster-${GUID}</code></p>
-<p>Delete all of the files created by the OpenShift installer:</p>
-<pre><code>rm -rf $HOME/.kube
-rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.com/openshift/installer/blob/master/docs/user/aws/README.md" target="_blank" rel="noopener">Openshift Installer</a></p>
+str1=str2       # str1 匹配 str2
+str1!=str2      # str1 不匹配 str2
+str1&lt;str2       # str1 是否小于 str2
+str1&gt;str2       # str1 是否大于 str2
+-n str1         # str1 不为空(长度大于 0)
+-z str1         # str1 为空(长度为 0)
+
+-a file         # 文件存在 
+-d file         # 文件存在，是一个目录 
+-e file         # 文件存在; 相同的-a 
+-f file         # 文件存在，是一个常规文件（即不是目录或其他特殊类型的文件） 
+-r file         # 你有读权限 
+-r file         # 文件存在，不为空 
+-w file         # 你有写权限 
+-x file         # 你有文件的执行权限
+
+file1 -nt file2     # file1 is newer than file2
+file1 -ot file2     # file1 is older than file2
+
+-lt     # 小于 
+-le     # 小于或等于 
+-eq     # 等于
+-ge     # 大于或等于 
+-gt     # 大于
+-ne     # 不等于</code></pre><p>Ref:<br><a href="https://www.cnblogs.com/savorboard/p/bash-guide.html" target="_blank" rel="noopener">https://www.cnblogs.com/savorboard/p/bash-guide.html</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -512,7 +524,7 @@ rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.c
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bh7cw.github.io/2020/07/12/install-openshift-cluster-on-aws/">https://bh7cw.github.io/2020/07/12/install-openshift-cluster-on-aws/</a>
+                    <a href="https://bh7cw.github.io/2020/07/13/linux-commands/">https://bh7cw.github.io/2020/07/13/linux-commands/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -550,12 +562,8 @@ rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.c
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/AWS/">
-                                    <span class="chip bg-color">AWS</span>
-                                </a>
-                            
-                                <a href="/tags/Openshift/">
-                                    <span class="chip bg-color">Openshift</span>
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
                                 </a>
                             
                         </div>
@@ -601,19 +609,19 @@ rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.c
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/07/13/linux-commands/">
+                <a href="/2020/07/13/github-practical-skills/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Linux Commands">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Github practical skills">
                         
-                        <span class="card-title">Linux Commands</span>
+                        <span class="card-title">Github practical skills</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            This post concludes useful Linux commands.
+                            This post concludes pratical skills to use Github as a team member.
                         
                     </div>
                     <div class="publish-info">
@@ -635,8 +643,8 @@ rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.c
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/Github/">
+                        <span class="chip bg-color">Github</span>
                     </a>
                     
                 </div>
@@ -647,7 +655,7 @@ rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.c
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/07/12/install-openshift-cluster-on-aws/">
@@ -681,7 +689,6 @@ rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.c
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
