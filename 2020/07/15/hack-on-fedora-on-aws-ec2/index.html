@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Github practical skills, Rust, Golang, Java, Linux, Opensource, HAM">
+    <meta name="keywords" content="Hack on Fedora CoreOS on AWS EC2, Rust, Golang, Java, Linux, Opensource, HAM">
     <meta name="description" content="enjoy your life">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Github practical skills | bh7cw</title>
+    <title>Hack on Fedora CoreOS on AWS EC2 | bh7cw</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -202,12 +202,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Github practical skills</h1>
+                    <h1 class="description center-align post-title">Hack on Fedora CoreOS on AWS EC2</h1>
                 </div>
             </div>
         </div>
@@ -324,8 +324,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Github/">
-                                <span class="chip bg-color">Github</span>
+                            <a href="/tags/Fedora-CoreOS/">
+                                <span class="chip bg-color">Fedora CoreOS</span>
+                            </a>
+                        
+                            <a href="/tags/CoreOS-Assembler/">
+                                <span class="chip bg-color">CoreOS Assembler</span>
+                            </a>
+                        
+                            <a href="/tags/AWS/">
+                                <span class="chip bg-color">AWS</span>
                             </a>
                         
                     </div>
@@ -349,7 +357,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-07-13
+                    2020-07-15
                 </div>
                 
 
@@ -363,14 +371,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    357
+                    188
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    2 Min
+                    1 Min
                 </div>
                 
 
@@ -385,28 +393,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="set-up-Github"><a href="#set-up-Github" class="headerlink" title="set up Github"></a>set up Github</h2><ul>
-<li>edit <code>.gitconfig</code>:<pre><code>[user]
-      email = myemail
-      name = myname
-[credential "https://github.com"]
-      username = myusername
-      helper = store</code></pre></li>
-<li>edit <code>.git-credentials</code>:<pre><code>https://&lt;YOU&gt;:&lt;TOKEN&gt;@github.com</code></pre><h2 id="basic-steps"><a href="#basic-steps" class="headerlink" title="basic steps"></a>basic steps</h2><pre><code>git clone gitrepo
-git status
-git add . #add all
-git add hello/* #Git add to subdirectory
-git commit -m "commit message"
-git pull origin master
-git push origin master</code></pre><h2 id="set-remote-branches"><a href="#set-remote-branches" class="headerlink" title="set remote branches"></a>set remote branches</h2>After fork a repository, we can set the push url, so we can push to our repo and pull from the orginal repo.<br>check the remote branches:<br><code>git remote -v</code><br>set the push url:<br><code>git remote set-url --push origin mmyrepo</code><br>Check set correctly:<br><code>git remote -v</code></li>
-</ul>
-<h2 id="rebase"><a href="#rebase" class="headerlink" title="rebase"></a>rebase</h2><p>Before submit PR, it’s always good to rebase and squash all the commits into one commit, so it’s more convenient to be reviewed.<br><code>git rebase -i HEAD~8</code> #combine the last 8 commits as one commit<br>use editor, like vim to edit:<br>  :i -&gt; edit the rebase, pick the first one, and s the left<br>  :wq -&gt; save and exit<br>keep those commits message to <code>rebase</code>, and others to <code>squash</code> or <code>s</code><br>If we didn’t get into the commit message automatically, we can continue:<br><code>git rebase --continue</code><br>  :i -&gt; edit the whole commit mesage<br>  :wq -&gt; save and exit<br>Keep those required message.<br>If we want to abort:<br><code>git rebase --abort</code></p>
-<h2 id="Discard-all-local-changes"><a href="#Discard-all-local-changes" class="headerlink" title="Discard all local changes"></a>Discard all local changes</h2><p>Discard all local changes, but save them for possible re-use later: <code>git stash</code><br>Discarding local changes (permanently) to a file:<br><code>git checkout -- &lt;file&gt;</code><br>Discard all local changes to all files permanently:<br><code>git reset --hard</code></p>
-<h2 id="Sync-forked-repo-to-update"><a href="#Sync-forked-repo-to-update" class="headerlink" title="Sync forked repo to update"></a>Sync forked repo to update</h2><p>If forked repo is behind the orginal repo, we need to sync:</p>
-<pre><code>git remote add upstream https://github.com/upstream/repo.git
-git pull --rebase upstream master
-git push --force-with-lease origin master</code></pre><h2 id="amend-commits"><a href="#amend-commits" class="headerlink" title="amend commits"></a>amend commits</h2><p>If we need to amend our commits:<br><code>git commit --amend</code></p>
-<p>Update more later.</p>
+                <h2 id="Build-image-with-COSA"><a href="#Build-image-with-COSA" class="headerlink" title="Build image with COSA"></a>Build image with COSA</h2><pre><code>chmod +x ./cosa &amp;&amp; ./cosa
+cosa init https://github.com/coreos/fedora-coreos-config.git
+cosa fetch
+cosa build
+cosa buildextend-aws --upload</code></pre><hr>
+<h2 id="Upload-vmdk-file-to-s3"><a href="#Upload-vmdk-file-to-s3" class="headerlink" title="Upload vmdk file to s3"></a>Upload vmdk file to s3</h2><p>upload built latest fedora coreos image to S3<br>create a s3 bucket name “images” manually<br><code>aws s3 cp rhcos.raw s3://images</code></p>
+<h2 id="Import-Snapshot"><a href="#Import-Snapshot" class="headerlink" title="Import Snapshot"></a>Import Snapshot</h2><p><code>aws ec2 import-snapshot --description "My dev fcos" --disk-container="file://{fcosdir}/buildfcos/fcos.json"</code></p>
+<h2 id="Check-Status"><a href="#Check-Status" class="headerlink" title="Check Status"></a>Check Status</h2><p><code>aws ec2 describe-import-snapshot-tasks --import-task-ids import-snap-1234567890abcdef0</code></p>
+<h2 id="Create-Image"><a href="#Create-Image" class="headerlink" title="Create Image"></a>Create Image</h2><p>Create Snapshot<br>Ref:<br><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot" target="_blank" rel="noopener">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot</a></p>
+<h2 id="Register-Image"><a href="#Register-Image" class="headerlink" title="Register Image"></a>Register Image</h2><p>AMIs: Register new AMI<br><del>(commands tbc)</del><br>aws ec2 register-image –image-location fcos20200610/fedora-coreos-32.20200611.dev.0-aws.x86_64.vmdk –name “MyFCOS”</p>
+<h2 id="launch-ec2-instance"><a href="#launch-ec2-instance" class="headerlink" title="launch ec2 instance"></a>launch ec2 instance</h2><p>Chose the created image to build ec2 instance.</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -450,7 +447,7 @@ git push --force-with-lease origin master</code></pre><h2 id="amend-commits"><a 
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bh7cw.github.io/2020/07/13/github-practical-skills/">https://bh7cw.github.io/2020/07/13/github-practical-skills/</a>
+                    <a href="https://bh7cw.github.io/2020/07/15/hack-on-fedora-on-aws-ec2/">https://bh7cw.github.io/2020/07/15/hack-on-fedora-on-aws-ec2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -488,8 +485,16 @@ git push --force-with-lease origin master</code></pre><h2 id="amend-commits"><a 
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Github/">
-                                    <span class="chip bg-color">Github</span>
+                                <a href="/tags/Fedora-CoreOS/">
+                                    <span class="chip bg-color">Fedora CoreOS</span>
+                                </a>
+                            
+                                <a href="/tags/CoreOS-Assembler/">
+                                    <span class="chip bg-color">CoreOS Assembler</span>
+                                </a>
+                            
+                                <a href="/tags/AWS/">
+                                    <span class="chip bg-color">AWS</span>
                                 </a>
                             
                         </div>
@@ -535,64 +540,7 @@ git push --force-with-lease origin master</code></pre><h2 id="amend-commits"><a 
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/07/13/hack-on-fedora-on-aws-ec2/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Hack on Fedora CoreOS on AWS EC2">
-                        
-                        <span class="card-title">Hack on Fedora CoreOS on AWS EC2</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            This post concludes building Fedora CoreOS image with COSA on AWS EC2.
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-13
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Fedora-CoreOS/">
-                        <span class="chip bg-color">Fedora CoreOS</span>
-                    </a>
-                    
-                    <a href="/tags/CoreOS-Assembler/">
-                        <span class="chip bg-color">CoreOS Assembler</span>
-                    </a>
-                    
-                    <a href="/tags/AWS/">
-                        <span class="chip bg-color">AWS</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/07/13/linux-commands/">
+                <a href="/2020/07/23/linux-commands/">
                     <div class="card-image">
                         
                         
@@ -608,9 +556,9 @@ git push --force-with-lease origin master</code></pre><h2 id="amend-commits"><a 
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-13
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-23
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -628,6 +576,59 @@ git push --force-with-lease origin master</code></pre><h2 id="amend-commits"><a 
                     
                     <a href="/tags/Linux/">
                         <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/07/14/install-openshift-cluster-on-aws/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Install Openshift Cluster on AWS">
+                        
+                        <span class="card-title">Install Openshift Cluster on AWS</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            This post includes steps to install openshift cluster on aws.
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/AWS/">
+                        <span class="chip bg-color">AWS</span>
+                    </a>
+                    
+                    <a href="/tags/Openshift/">
+                        <span class="chip bg-color">Openshift</span>
                     </a>
                     
                 </div>

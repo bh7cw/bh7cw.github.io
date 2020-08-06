@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux Commands, Rust, Golang, Java, Linux, Opensource, HAM">
+    <meta name="keywords" content="Github practical skills, Rust, Golang, Java, Linux, Opensource, HAM">
     <meta name="description" content="enjoy your life">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Linux Commands | bh7cw</title>
+    <title>Github practical skills | bh7cw</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -202,12 +202,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux Commands</h1>
+                    <h1 class="description center-align post-title">Github practical skills</h1>
                 </div>
             </div>
         </div>
@@ -324,8 +324,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/Github/">
+                                <span class="chip bg-color">Github</span>
                             </a>
                         
                     </div>
@@ -349,7 +349,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-07-13
+                    2020-08-06
                 </div>
                 
 
@@ -363,14 +363,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    865
+                    357
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    4 Min
+                    2 Min
                 </div>
                 
 
@@ -385,102 +385,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><p>search for pattern in filename<br><code>grep pattern filename</code><br>-i: captial insensitive<br>-r: search all the file in the directory<br><code>grep -r admin /etc/</code></p>
-<h2 id="wc"><a href="#wc" class="headerlink" title="wc"></a>wc</h2><pre><code>$ wc demo.txt
-7459   15915  398400 demo.txt
-lines  words  bytes
-行数    单词数  字符数    </code></pre><h2 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h2><p><code>sed 's/ /-/g' example.txt</code><br>replace all the <code>space</code> with <code>-</code><br>Hello This is a Test 1 2 3 4 -&gt; Hello-This-is-a-Test-1-2-3-4</p>
-<p><code>sed 's/[0-9]/d/g' example.txt</code><br>replace all the numbers with <code>d</code><br>Hello This is a Test 1 2 3 4 -&gt; Hello This is a Test d d d d</p>
-<h2 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h2><p><code>sort example.txt</code><br>example.txt</p>
-<pre><code>f
-b
-c
-g
-a
-e
-d</code></pre><p>sort example.txt</p>
-<pre><code>a
-b
-c
-d
-e
-f
-g</code></pre><p><code>sort example.txt | sort -R</code> randomly<br><code>sort example.txt | uniq</code> show unique lines<br><code>sort example.txt | uniq -c</code> show unique lines and times</p>
-<h2 id="cut"><a href="#cut" class="headerlink" title="cut"></a>cut</h2><p><code>cut -d " " -f2,7,9 example.txt</code> show the 2,7,9 words connected with “ “<br>red riding hood went to the park to play -&gt; riding park play</p>
-<h2 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h2><p><code>echo -ne "Hello\nWorld\n"</code><br>“\n” output<br>Hello<br>World</p>
-<h2 id="fmt"><a href="#fmt" class="headerlink" title="fmt"></a>fmt</h2><p><code>cat example.txt | fmt -w 20</code>: print each line with 20 words</p>
-<h2 id="tr"><a href="#tr" class="headerlink" title="tr"></a>tr</h2><p>cat example.txt | tr ‘a-z’ ‘A-Z’: change a-z -&gt; A-Z<br><code>cat example.txt | tr ' ' '\n'</code>: change ‘ ‘ -&gt; ‘\n’</p>
-<h2 id="nl"><a href="#nl" class="headerlink" title="nl"></a>nl</h2><p><code>nl -s". " example.txt</code>show the number of line</p>
-<pre><code> 1. Lorem ipsum
- 2. dolor sit amet,
- 3. consetetur
- 4. sadipscing elitr,
- 5. sed diam nonumy
- 6. eirmod tempor
- 7. invidunt ut labore
- 8. et dolore magna
- 9. aliquyam erat, sed
-10. diam voluptua. At
-11. vero eos et
-12. accusam et justo
-13. duo dolores et ea
-14. rebum. Stet clita
-15. kasd gubergren,
-16. no sea takimata
-17. sanctus est Lorem
-18. ipsum dolor sit
-19. amet.</code></pre><h2 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h2><p>change password</p>
-<h2 id="date"><a href="#date" class="headerlink" title="date"></a>date</h2><p>show current date</p>
-<h2 id="cal"><a href="#cal" class="headerlink" title="cal"></a>cal</h2><p>show the calendar for this month</p>
-<h2 id="finger"><a href="#finger" class="headerlink" title="finger"></a>finger</h2><p><code>finger username</code> display the info of the user</p>
-<h2 id="uptime"><a href="#uptime" class="headerlink" title="uptime"></a>uptime</h2><p>show the running time</p>
-<h2 id="uname"><a href="#uname" class="headerlink" title="uname"></a>uname</h2><p><code>uname -a</code> show kernel info</p>
-<h2 id="df"><a href="#df" class="headerlink" title="df"></a>df</h2><p>show usage of disk</p>
-<h2 id="du"><a href="#du" class="headerlink" title="du"></a>du</h2><p><code>du filename</code> show the size of directory and file<br>-s: only show the total size</p>
-<h2 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h2><p><code>ps -u yourusername</code> show the processes</p>
-<h2 id="kill"><a href="#kill" class="headerlink" title="kill"></a>kill</h2><p><code>kill PID</code></p>
-<h2 id="killall"><a href="#killall" class="headerlink" title="killall"></a>killall</h2><p><code>killall processname</code></p>
-<h2 id="top"><a href="#top" class="headerlink" title="top"></a>top</h2><p>show current process</p>
-<h2 id="bg"><a href="#bg" class="headerlink" title="bg"></a>bg</h2><h2 id="fg"><a href="#fg" class="headerlink" title="fg"></a>fg</h2><h2 id="dig"><a href="#dig" class="headerlink" title="dig"></a>dig</h2><p><code>dig domain</code> dig the info of the domain</p>
-<h2 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h2><p><code>wget file</code> download the file</p>
-<h2 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h2><pre><code>${varname:-word}    # 如果varname存在且不为null，则返回其值; 否则返回word
-${varname:=word}    # 如果varname存在且不为null，则返回其值;否则设置它，然后返回其值
-${varname:+word}    # 如果varname存在并且不为null，返回word; 否则返回null 
-${varname:offset:length}    # 执行子字符串扩展。它返回$ varname的子字符串，从offset开始，最多为length的字符
-2.2 String Substitution</code></pre><h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><pre><code>${variable#pattern}         # if the pattern matches the beginning of the variable's value, delete the shortest part that matches and return the rest
-${variable##pattern}        # if the pattern matches the beginning of the variable's value, delete the longest part that matches and return the rest
-${variable%pattern}         # if the pattern matches the end of the variable's value, delete the shortest part that matches and return the rest
-${variable%%pattern}        # if the pattern matches the end of the variable's value, delete the longest part that matches and return the rest
-${variable/pattern/string}  # the longest match to pattern in variable is replaced by string. Only the first match is replaced
-${variable//pattern/string} # the longest match to pattern in variable is replaced by string. All matches are replaced
-${#varname}     # returns the length of the value of the variable as a character string</code></pre><h2 id="expression"><a href="#expression" class="headerlink" title="expression"></a>expression</h2><pre><code>statement1 &amp;&amp; statement2  # 两边的条件都为true
-statement1 || statement2  # 其中一边为true
-
-str1=str2       # str1 匹配 str2
-str1!=str2      # str1 不匹配 str2
-str1&lt;str2       # str1 是否小于 str2
-str1&gt;str2       # str1 是否大于 str2
--n str1         # str1 不为空(长度大于 0)
--z str1         # str1 为空(长度为 0)
-
--a file         # 文件存在 
--d file         # 文件存在，是一个目录 
--e file         # 文件存在; 相同的-a 
--f file         # 文件存在，是一个常规文件（即不是目录或其他特殊类型的文件） 
--r file         # 你有读权限 
--r file         # 文件存在，不为空 
--w file         # 你有写权限 
--x file         # 你有文件的执行权限
-
-file1 -nt file2     # file1 is newer than file2
-file1 -ot file2     # file1 is older than file2
-
--lt     # 小于 
--le     # 小于或等于 
--eq     # 等于
--ge     # 大于或等于 
--gt     # 大于
--ne     # 不等于</code></pre><p>Ref:<br><a href="https://www.cnblogs.com/savorboard/p/bash-guide.html" target="_blank" rel="noopener">https://www.cnblogs.com/savorboard/p/bash-guide.html</a></p>
+                <h2 id="set-up-Github"><a href="#set-up-Github" class="headerlink" title="set up Github"></a>set up Github</h2><ul>
+<li>edit <code>.gitconfig</code>:<pre><code>[user]
+      email = myemail
+      name = myname
+[credential "https://github.com"]
+      username = myusername
+      helper = store</code></pre></li>
+<li>edit <code>.git-credentials</code>:<pre><code>https://&lt;YOU&gt;:&lt;TOKEN&gt;@github.com</code></pre><h2 id="basic-steps"><a href="#basic-steps" class="headerlink" title="basic steps"></a>basic steps</h2><pre><code>git clone gitrepo
+git status
+git add . #add all
+git add hello/* #Git add to subdirectory
+git commit -m "commit message"
+git pull origin master
+git push origin master</code></pre><h2 id="set-remote-branches"><a href="#set-remote-branches" class="headerlink" title="set remote branches"></a>set remote branches</h2>After fork a repository, we can set the push url, so we can push to our repo and pull from the orginal repo.<br>check the remote branches:<br><code>git remote -v</code><br>set the push url:<br><code>git remote set-url --push origin mmyrepo</code><br>Check set correctly:<br><code>git remote -v</code></li>
+</ul>
+<h2 id="rebase"><a href="#rebase" class="headerlink" title="rebase"></a>rebase</h2><p>Before submit PR, it’s always good to rebase and squash all the commits into one commit, so it’s more convenient to be reviewed.<br><code>git rebase -i HEAD~8</code> #combine the last 8 commits as one commit<br>use editor, like vim to edit:<br>  :i -&gt; edit the rebase, pick the first one, and s the left<br>  :wq -&gt; save and exit<br>keep those commits message to <code>rebase</code>, and others to <code>squash</code> or <code>s</code><br>If we didn’t get into the commit message automatically, we can continue:<br><code>git rebase --continue</code><br>  :i -&gt; edit the whole commit mesage<br>  :wq -&gt; save and exit<br>Keep those required message.<br>If we want to abort:<br><code>git rebase --abort</code></p>
+<h2 id="Discard-all-local-changes"><a href="#Discard-all-local-changes" class="headerlink" title="Discard all local changes"></a>Discard all local changes</h2><p>Discard all local changes, but save them for possible re-use later: <code>git stash</code><br>Discarding local changes (permanently) to a file:<br><code>git checkout -- &lt;file&gt;</code><br>Discard all local changes to all files permanently:<br><code>git reset --hard</code></p>
+<h2 id="Sync-forked-repo-to-update"><a href="#Sync-forked-repo-to-update" class="headerlink" title="Sync forked repo to update"></a>Sync forked repo to update</h2><p>If forked repo is behind the orginal repo, we need to sync:</p>
+<pre><code>git remote add upstream https://github.com/upstream/repo.git
+git pull --rebase upstream master
+git push --force-with-lease origin master</code></pre><h2 id="amend-commits"><a href="#amend-commits" class="headerlink" title="amend commits"></a>amend commits</h2><p>If we need to amend our commits:<br><code>git commit --amend</code></p>
+<p>Update more later.</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -524,7 +450,7 @@ file1 -ot file2     # file1 is older than file2
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bh7cw.github.io/2020/07/13/linux-commands/">https://bh7cw.github.io/2020/07/13/linux-commands/</a>
+                    <a href="https://bh7cw.github.io/2020/08/06/github-practical-skills/">https://bh7cw.github.io/2020/08/06/github-practical-skills/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -562,8 +488,8 @@ file1 -ot file2     # file1 is older than file2
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/Github/">
+                                    <span class="chip bg-color">Github</span>
                                 </a>
                             
                         </div>
@@ -605,11 +531,12 @@ file1 -ot file2     # file1 is older than file2
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/07/13/github-practical-skills/">
+                <a href="/2020/08/06/github-practical-skills/">
                     <div class="card-image">
                         
                         
@@ -625,9 +552,9 @@ file1 -ot file2     # file1 is older than file2
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -640,6 +567,7 @@ file1 -ot file2     # file1 is older than file2
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -658,24 +586,24 @@ file1 -ot file2     # file1 is older than file2
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/12/install-openshift-cluster-on-aws/">
+                <a href="/2020/07/23/linux-commands/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Install Openshift Cluster on AWS">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Linux Commands">
                         
-                        <span class="card-title">Install Openshift Cluster on AWS</span>
+                        <span class="card-title">Linux Commands</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            This post includes steps to install openshift cluster on aws.
+                            This post concludes useful Linux commands.
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-23
                             </span>
                         <span class="publish-author">
                             
@@ -692,12 +620,8 @@ file1 -ot file2     # file1 is older than file2
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/AWS/">
-                        <span class="chip bg-color">AWS</span>
-                    </a>
-                    
-                    <a href="/tags/Openshift/">
-                        <span class="chip bg-color">Openshift</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
