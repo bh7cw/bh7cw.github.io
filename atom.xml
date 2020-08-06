@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bh7cw.github.io/"/>
-  <updated>2020-08-06T21:57:46.078Z</updated>
+  <updated>2020-08-06T22:13:14.163Z</updated>
   <id>https://bh7cw.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://bh7cw.github.io/2020/08/06/github-practical-skills/"/>
     <id>https://bh7cw.github.io/2020/08/06/github-practical-skills/</id>
     <published>2020-08-06T22:33:49.000Z</published>
-    <updated>2020-08-06T21:57:46.078Z</updated>
+    <updated>2020-08-06T22:13:14.163Z</updated>
     
     <summary type="html">
     
@@ -37,7 +37,7 @@
     </summary>
     
     
-      <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
+      <category term="Github" scheme="https://bh7cw.github.io/categories/Github/"/>
     
     
       <category term="Github" scheme="https://bh7cw.github.io/tags/Github/"/>
@@ -49,7 +49,7 @@
     <link href="https://bh7cw.github.io/2020/07/23/linux-commands/"/>
     <id>https://bh7cw.github.io/2020/07/23/linux-commands/</id>
     <published>2020-07-23T22:33:49.000Z</published>
-    <updated>2020-08-06T21:58:31.013Z</updated>
+    <updated>2020-08-06T22:12:36.981Z</updated>
     
     <summary type="html">
     
@@ -64,7 +64,7 @@
     </summary>
     
     
-      <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
+      <category term="Linux" scheme="https://bh7cw.github.io/categories/Linux/"/>
     
     
       <category term="Linux" scheme="https://bh7cw.github.io/tags/Linux/"/>
@@ -76,7 +76,7 @@
     <link href="https://bh7cw.github.io/2020/07/15/hack-on-fedora-on-aws-ec2/"/>
     <id>https://bh7cw.github.io/2020/07/15/hack-on-fedora-on-aws-ec2/</id>
     <published>2020-07-15T22:33:49.000Z</published>
-    <updated>2020-08-06T21:58:00.217Z</updated>
+    <updated>2020-08-06T22:12:23.544Z</updated>
     
     <summary type="html">
     
@@ -91,7 +91,7 @@
     </summary>
     
     
-      <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
+      <category term="Linux" scheme="https://bh7cw.github.io/categories/Linux/"/>
     
     
       <category term="Fedora CoreOS" scheme="https://bh7cw.github.io/tags/Fedora-CoreOS/"/>
@@ -107,7 +107,7 @@
     <link href="https://bh7cw.github.io/2020/07/14/install-openshift-cluster-on-aws/"/>
     <id>https://bh7cw.github.io/2020/07/14/install-openshift-cluster-on-aws/</id>
     <published>2020-07-15T00:27:08.000Z</published>
-    <updated>2020-08-06T21:58:12.004Z</updated>
+    <updated>2020-08-06T22:12:57.809Z</updated>
     
     <summary type="html">
     
@@ -122,7 +122,7 @@
     </summary>
     
     
-      <category term="Markdown" scheme="https://bh7cw.github.io/categories/Markdown/"/>
+      <category term="Openshift" scheme="https://bh7cw.github.io/categories/Openshift/"/>
     
     
       <category term="AWS" scheme="https://bh7cw.github.io/tags/AWS/"/>
