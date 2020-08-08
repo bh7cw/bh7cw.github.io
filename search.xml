@@ -70,11 +70,11 @@
       
         <tags>
             
+            <tag> AWS </tag>
+            
             <tag> Fedora CoreOS </tag>
             
             <tag> CoreOS Assembler </tag>
-            
-            <tag> AWS </tag>
             
         </tags>
       
@@ -99,9 +99,9 @@
       
         <tags>
             
-            <tag> AWS </tag>
-            
             <tag> Openshift </tag>
+            
+            <tag> AWS </tag>
             
         </tags>
       
