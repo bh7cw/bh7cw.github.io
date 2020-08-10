@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Install Openshift Cluster on AWS, Rust, Golang, Java, Linux, Opensource, HAM">
+    <meta name="keywords" content="Systemd 101, Rust, Golang, Java, Linux, Opensource, HAM">
     <meta name="description" content="enjoy your life">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Install Openshift Cluster on AWS | bh7cw</title>
+    <title>Systemd 101 | bh7cw</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -202,12 +202,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Install Openshift Cluster on AWS</h1>
+                    <h1 class="description center-align post-title">Systemd 101</h1>
                 </div>
             </div>
         </div>
@@ -324,12 +324,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Openshift/">
-                                <span class="chip bg-color">Openshift</span>
-                            </a>
-                        
-                            <a href="/tags/AWS/">
-                                <span class="chip bg-color">AWS</span>
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
                             </a>
                         
                     </div>
@@ -340,8 +336,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Openshift/" class="post-category">
-                                Openshift
+                            <a href="/categories/Linux/" class="post-category">
+                                Linux
                             </a>
                         
                     </div>
@@ -353,28 +349,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-07-14
+                    2020-08-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-08-06
+                    2020-08-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    856
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    5 Min
+                    9 Min
                 </div>
                 
 
@@ -389,87 +385,268 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Install-Openshift-Cluster-on-AWS"><a href="#Install-Openshift-Cluster-on-AWS" class="headerlink" title="Install Openshift Cluster on AWS"></a>Install Openshift Cluster on AWS</h1><h2 id="Install-the-AWS-CLI-tools-Optional"><a href="#Install-the-AWS-CLI-tools-Optional" class="headerlink" title="Install the AWS CLI tools(Optional):"></a>Install the AWS CLI tools(Optional):</h2><h3 id="Download-the-latest-AWS-Command-Line-Interface"><a href="#Download-the-latest-AWS-Command-Line-Interface" class="headerlink" title="Download the latest AWS Command Line Interface"></a>Download the latest AWS Command Line Interface</h3><pre><code>sudo -i
-curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
-unzip awscli-bundle.zip</code></pre><h3 id="Install-the-AWS-CLI-into-bin-aws"><a href="#Install-the-AWS-CLI-into-bin-aws" class="headerlink" title="Install the AWS CLI into /bin/aws"></a>Install the AWS CLI into /bin/aws</h3><p><code>./awscli-bundle/install -i /usr/local/aws -b /bin/aws</code></p>
-<h3 id="Validate-the-AWS-CLI-works"><a href="#Validate-the-AWS-CLI-works" class="headerlink" title="Validate the AWS CLI works"></a>Validate the AWS CLI works</h3><p><code>aws --version</code></p>
-<h3 id="Clean-up-downloaded-files"><a href="#Clean-up-downloaded-files" class="headerlink" title="Clean up downloaded files"></a>Clean up downloaded files</h3><p><code>rm -rf /root/awscli-bundle /root/awscli-bundle.zip</code></p>
-<h2 id="Preparation-before-Run-OpenShift-Installer"><a href="#Preparation-before-Run-OpenShift-Installer" class="headerlink" title="Preparation before Run OpenShift Installer:"></a>Preparation before Run OpenShift Installer:</h2><h3 id="Get-the-OpenShift-installer-binary"><a href="#Get-the-OpenShift-installer-binary" class="headerlink" title="Get the OpenShift installer binary:"></a>Get the OpenShift installer binary:</h3><pre><code>OCP_VERSION=4.4.3
-wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OCP_VERSION}/openshift-install-linux-${OCP_VERSION}.tar.gz
-tar zxvf openshift-install-linux-${OCP_VERSION}.tar.gz -C /usr/bin
-rm -f openshift-install-linux-${OCP_VERSION}.tar.gz /usr/bin/README.md
-chmod +x /usr/bin/openshift-install</code></pre><h3 id="Get-the-oc-CLI-tool"><a href="#Get-the-oc-CLI-tool" class="headerlink" title="Get the oc CLI tool:"></a>Get the oc CLI tool:</h3><pre><code>wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OCP_VERSION}/openshift-client-linux-${OCP_VERSION}.tar.gz
-tar zxvf openshift-client-linux-${OCP_VERSION}.tar.gz -C /usr/bin
-rm -f openshift-client-linux-${OCP_VERSION}.tar.gz /usr/bin/README.md
-chmod +x /usr/bin/oc</code></pre><h3 id="Check-that-the-OpenShift-installer-and-CLI-are-in-usr-bin"><a href="#Check-that-the-OpenShift-installer-and-CLI-are-in-usr-bin" class="headerlink" title="Check that the OpenShift installer and CLI are in /usr/bin:"></a>Check that the OpenShift installer and CLI are in /usr/bin:</h3><p><code>ls -l /usr/bin/{oc,openshift-install}</code></p>
-<h3 id="Set-up-bash-completion-for-the-OpenShift-CLI"><a href="#Set-up-bash-completion-for-the-OpenShift-CLI" class="headerlink" title="Set up bash completion for the OpenShift CLI:"></a>Set up bash completion for the OpenShift CLI:</h3><p><code>oc completion bash &gt;/etc/bash_completion.d/openshift</code></p>
-<h3 id="Exit-the-super-mode-or-ctrl-D"><a href="#Exit-the-super-mode-or-ctrl-D" class="headerlink" title="Exit the super mode or ctrl+D"></a>Exit the super mode or ctrl+D</h3><p><code>exit</code></p>
-<h3 id="Save-your-provided-AWS-credentials-to-the-HOME-aws-credentials-file"><a href="#Save-your-provided-AWS-credentials-to-the-HOME-aws-credentials-file" class="headerlink" title="Save your provided AWS credentials to the $HOME/.aws/credentials file"></a>Save your provided AWS credentials to the $HOME/.aws/credentials file</h3><pre><code>export AWSKEY=&lt;YOURACCESSKEY&gt;
-export AWSSECRETKEY=&lt;YOURSECRETKEY&gt;
-export REGION=us-east-2
-mkdir $HOME/.aws
-cat &lt;&lt; EOF &gt;&gt;  $HOME/.aws/credentials
-[User name]
-aws_access_key_id = ${AWSKEY}
-aws_secret_access_key = ${AWSSECRETKEY}
-region = $REGION
-EOF</code></pre><h3 id="Check-your-credentials-work"><a href="#Check-your-credentials-work" class="headerlink" title="Check your credentials work:"></a>Check your credentials work:</h3><p><code>aws sts get-caller-identity</code></p>
-<h3 id="Copy-pull-secret"><a href="#Copy-pull-secret" class="headerlink" title="Copy pull secret:"></a>Copy pull secret:</h3><ul>
-<li>go to <a href="https://www.openshift.com/try" target="_blank" rel="noopener">https://www.openshift.com/try</a></li>
-<li>Click Create your Own Cluster and then Try it in the cloud</li>
-<li>For Infrastructure Provider, click <code>AWS</code></li>
-<li>Click Installer-Provisioned-Infrastructure</li>
-<li>Copy Pull Secret<h3 id="Double-check"><a href="#Double-check" class="headerlink" title="Double check"></a>Double check</h3>pull secret contains credentials for all three container registries: quay.io, registry.connect.redhat.com, and registry.redhat.io as well as cloud.openshift.com.</li>
+                <h2 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h2><ul>
+<li>start daemon</li>
+<li>become the first process(PID: 1) instead of <code>initd</code></li>
+<li>check the version of systems<br><code>$ systemctl --version</code><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2></li>
 </ul>
-<h3 id="Create-an-SSH-keypair-for-your-OpenShift-environment"><a href="#Create-an-SSH-keypair-for-your-OpenShift-environment" class="headerlink" title="Create an SSH keypair for your OpenShift environment:"></a>Create an SSH keypair for your OpenShift environment:</h3><p><code>ssh-keygen -f ~/.ssh/cluster-${GUID}-key -N</code></p>
-<h2 id="Install-OpenShift-Container-Platform"><a href="#Install-OpenShift-Container-Platform" class="headerlink" title="Install OpenShift Container Platform:"></a>Install OpenShift Container Platform:</h2><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>The main assets generated by the installer are the Ignition configs for the bootstrap, master, and worker machines. Given these three configs (and correctly configured infrastructure), it is possible to start an OpenShift cluster. The process for bootstrapping a cluster looks like the following:</p>
-<ul>
-<li><p>The bootstrap machine boots and starts hosting the remote resources required for the master machines to boot.</p>
-</li>
-<li><p>The master machines fetch the remote resources from the bootstrap machine and finish booting.</p>
-</li>
-<li><p>The master machines use the bootstrap node to form an etcd cluster.</p>
-</li>
-<li><p>The bootstrap node starts a temporary Kubernetes control plane using the newly created etcd cluster.</p>
-</li>
-<li><p>The temporary control plane schedules the production control plane to the master machines.</p>
-</li>
-<li><p>The temporary control plane shuts down, yielding to the production control plane.</p>
-</li>
-<li><p>The bootstrap node injects OpenShift-specific components into the newly formed control plane.</p>
-</li>
-<li><p>The installer then tears down the bootstrap node.</p>
-</li>
-<li><p>The result of this bootstrapping process is a fully running OpenShift cluster. The cluster will then download and configure the remaining components needed for day-to-day operation, including the creation of worker machines on supported platforms.</p>
-</li>
-<li><p>The installer uses a wizard approach, asking a few questions about the environment before executing the installation. If you want to avoid the wizard or run the installer from a shell script, it is useful to set up environment variables for a particular cloud platform.</p>
-</li>
-</ul>
-<h3 id="Run-OpenShift-Installer"><a href="#Run-OpenShift-Installer" class="headerlink" title="Run OpenShift Installer"></a>Run OpenShift Installer</h3><pre><code>openshift-install create cluster --dir $HOME/cluster-${GUID}
+<p><img src="https://i.imgur.com/PW7AIfP.png" alt=""></p>
+<h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><p>Systemd includes a series of commands.</p>
+<h3 id="systemctl"><a href="#systemctl" class="headerlink" title="systemctl"></a>systemctl</h3><p>Main command, manage system.</p>
+<pre><code>$ sudo systemctl reboot
 
-? SSH Public Key /home/&lt;OpenTLC User&gt;/.ssh/cluster-&lt;GUID&gt;-key.pub
-? Platform aws
-INFO Credentials loaded from the "default" profile in file "/home/&lt;OpenTLC User&gt;/.aws/credentials"
-? Region us-east-2 (Ohio)
-? Base Domain sandboxNNN.opentlc.com
-? Cluster Name cluster-&lt;GUID&gt;
-? Pull Secret [? for help] ***************************************************************************************************************************************************************</code></pre><h3 id="Custom"><a href="#Custom" class="headerlink" title="Custom"></a>Custom</h3><p>It is possible to run a multi-step installation.</p>
-<p>Create the installation configuration:<br><code>openshift-install create install-config --dir $HOME/cluster-${GUID}</code></p>
-<p>Update the generated install-config.yaml file—for example, change the AWS EC2 instance types.</p>
-<p>Create the YAML manifests:<br>`openshift-install create manifests –dir $HOME/cluster-${GUID}``</p>
-<p>Create the Ignition configuration files:<br><code>openshift-install create ignition-configs --dir $HOME/cluster-${GUID}</code></p>
-<p>Install the cluster:<br><code>openshift-install create cluster --dir $HOME/cluster-${GUID}</code></p>
-<p>To delete the cluster, use:<br><code>openshift-install destroy cluster --dir $HOME/cluster-${GUID}</code></p>
-<p>Validate Cluster</p>
-<pre><code>Set up the CLI
-export KUBECONFIG=$HOME/cluster-${GUID}/auth/kubeconfig
-echo "export KUBECONFIG=$HOME/cluster-${GUID}/auth/kubeconfig" &gt;&gt;$HOME/.bashrc
-oc whoami oc get nodes oc get pod -A
-Clean Up Cluster (Reference)</code></pre><p>Delete the cluster:<br><code>openshift-install destroy cluster --dir $HOME/cluster-${GUID}</code></p>
-<p>Delete all of the files created by the OpenShift installer:</p>
-<pre><code>rm -rf $HOME/.kube
-rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.com/openshift/installer/blob/master/docs/user/aws/README.md" target="_blank" rel="noopener">Openshift Installer</a></p>
-<script>
+$ sudo systemctl poweroff
+
+$ sudo systemctl halt
+
+$ sudo systemctl suspend
+
+$ sudo systemctl hibernate
+
+$ sudo systemctl hybrid-sleep
+
+$ sudo systemctl rescue</code></pre><h3 id="systemd-analyze"><a href="#systemd-analyze" class="headerlink" title="systemd-analyze"></a>systemd-analyze</h3><p>Analyze the startup.</p>
+<pre><code>$ systemd-analyze                                     
+
+$ systemd-analyze blame
+
+$ systemd-analyze critical-chain
+
+$ systemd-analyze critical-chain atd.service</code></pre><h3 id="hostnamectl"><a href="#hostnamectl" class="headerlink" title="hostnamectl"></a>hostnamectl</h3><p>Show the machine information.</p>
+<pre><code>$ hostnamectl
+
+$ sudo hostnamectl set-hostname rhel7</code></pre><h3 id="localectl"><a href="#localectl" class="headerlink" title="localectl"></a>localectl</h3><p>Check the local configuration.</p>
+<pre><code>$ localectl
+
+$ sudo localectl set-locale LANG=en_GB.utf8
+$ sudo localectl set-keymap en_GB</code></pre><h3 id="timedatectl"><a href="#timedatectl" class="headerlink" title="timedatectl"></a>timedatectl</h3><p>Show the time zone.</p>
+<pre><code>$ timedatectl
+
+$ timedatectl list-timezones                                                                                   
+$ sudo timedatectl set-timezone America/New_York
+$ sudo timedatectl set-time YYYY-MM-DD
+$ sudo timedatectl set-time HH:MM:SS</code></pre><h3 id="loginctl"><a href="#loginctl" class="headerlink" title="loginctl"></a>loginctl</h3><p>Show the user information.</p>
+<pre><code>$ loginctl list-sessions
+
+$ loginctl list-users
+
+$ loginctl show-user username</code></pre><h2 id="Unit"><a href="#Unit" class="headerlink" title="Unit"></a>Unit</h2><p>Systemd can manage all the units/resources.<br>There are 12 units:</p>
+<pre><code>Service unit
+Target unit
+Device Unit
+Mount Unit
+Automount Unit
+Path Unit
+Scope Unit
+Slice Unit
+Snapshot Unit
+Socket Unit
+Swap Unit
+Timer Unit</code></pre><h3 id="Show-the-units"><a href="#Show-the-units" class="headerlink" title="Show the units"></a>Show the units</h3><pre><code>$ systemctl list-units
+
+$ systemctl list-units --all
+
+$ systemctl list-units --all --state=inactive
+
+$ systemctl list-units --failed
+
+$ systemctl list-units --type=service</code></pre><h3 id="Check-the-status-of-unit"><a href="#Check-the-status-of-unit" class="headerlink" title="Check the status of unit"></a>Check the status of unit</h3><pre><code>$ systemctl status
+
+$ sysystemctl status bluetooth.service
+
+$ systemctl -H root@rhel7.example.com status httpd.service
+
+$ systemctl is-active application.service
+
+$ systemctl is-failed application.service
+
+$ systemctl is-enabled application.service</code></pre><h3 id="Manage-unit"><a href="#Manage-unit" class="headerlink" title="Manage unit"></a>Manage unit</h3><pre><code>$ sudo systemctl start apache.service
+
+$ sudo systemctl stop apache.service
+
+$ sudo systemctl restart apache.service
+
+$ sudo systemctl kill apache.service
+
+$ sudo systemctl reload apache.service
+
+$ sudo systemctl daemon-reload
+
+$ systemctl show httpd.service
+
+$ systemctl show -p CPUShares httpd.service
+
+$ sudo systemctl set-property httpd.service CPUShares=500</code></pre><h3 id="Dependency"><a href="#Dependency" class="headerlink" title="Dependency"></a>Dependency</h3><pre><code>systemctl list-dependencies nginx.service
+systemctl list-dependencies --all nginx.service #show the target</code></pre><h3 id="Unit-configuration"><a href="#Unit-configuration" class="headerlink" title="Unit configuration"></a>Unit configuration</h3><p>Systemd reads configuration from <code>/etc/systemd/system/</code> by defualt, in which are mostly symblinks pointing to <code>/usr/lib/systemd/system/</code>.<br><code>systemctl enable</code> can create symlink between them.</p>
+<pre><code>$ sudo systemctl enable clamd@scan.service
+
+$ sudo ln -s  '/usr/lib/systemd/system/clamd@scan.service' '/etc/systemd/system/multi-user.target.wants/clamd@scan.service'</code></pre><p><code>systemctl disable</code> cancel the symlink.<br><code>sudo systemctl disable clamd@scan.service</code></p>
+<h3 id="List-all-the-files"><a href="#List-all-the-files" class="headerlink" title="List all the files"></a>List all the files</h3><pre><code>$ systemctl list-unit-files
+
+$ systemctl list-unit-files --type=service</code></pre><p>There are four status:<br>enabled<br>disabled<br>static<br>masked</p>
+<p>Configuration will take effect after restart:</p>
+<pre><code>$ sudo systemctl daemon-reload
+$ sudo systemctl restart httpd.service</code></pre><p>Configuration files are text format, and case sensitive(A/a).</p>
+<pre><code>$ systemctl cat atd.service
+
+[Unit]
+Description=ATD daemon
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/atd
+
+[Install]
+WantedBy=multi-user.target</code></pre><h3 id="Unit-block"><a href="#Unit-block" class="headerlink" title="[Unit] block"></a>[Unit] block</h3><p>First block.<br>Define the basic information and the relationship with other units.</p>
+<pre><code>Description：简短描述
+Documentation：文档地址
+Requires：当前 Unit 依赖的其他 Unit，如果它们没有运行，当前 Unit 会启动失败
+Wants：与当前 Unit 配合的其他 Unit，如果它们没有运行，当前 Unit 不会启动失败
+BindsTo：与Requires类似，它指定的 Unit 如果退出，会导致当前 Unit 停止运行
+Before：如果该字段指定的 Unit 也要启动，那么必须在当前 Unit 之后启动
+After：如果该字段指定的 Unit 也要启动，那么必须在当前 Unit 之前启动
+Conflicts：这里指定的 Unit 不能与当前 Unit 同时运行
+Condition...：当前 Unit 运行必须满足的条件，否则不会运行
+Assert...：当前 Unit 运行必须满足的条件，否则会报启动失败</code></pre><h3 id="Install-block"><a href="#Install-block" class="headerlink" title="[Install] block"></a>[Install] block</h3><p>Last block.<br>Define how to start.</p>
+<pre><code>WantedBy：它的值是一个或多个 Target，当前 Unit 激活时（enable）符号链接会放入/etc/systemd/system目录下面以 Target 名 + .wants后缀构成的子目录中
+RequiredBy：它的值是一个或多个 Target，当前 Unit 激活时，符号链接会放入/etc/systemd/system目录下面以 Target 名 + .required后缀构成的子目录中
+Alias：当前 Unit 可用于启动的别名
+Also：当前 Unit 激活（enable）时，会被同时激活的其他 Unit</code></pre><p>Details: <a href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html" target="_blank" rel="noopener">https://www.freedesktop.org/software/systemd/man/systemd.unit.html</a></p>
+<h3 id="Service-block"><a href="#Service-block" class="headerlink" title="[Service] block"></a>[Service] block</h3><p>Only for Service type unit.</p>
+<pre><code>Type：定义启动时的进程行为。它有以下几种值。
+Type=simple：默认值，执行ExecStart指定的命令，启动主进程
+Type=forking：以 fork 方式从父进程创建子进程，创建后父进程会立即退出
+Type=oneshot：一次性进程，Systemd 会等当前服务退出，再继续往下执行
+Type=dbus：当前服务通过D-Bus启动
+Type=notify：当前服务启动完毕，会通知Systemd，再继续往下执行
+Type=idle：若有其他任务执行完毕，当前服务才会运行
+ExecStart：启动当前服务的命令
+ExecStartPre：启动当前服务之前执行的命令
+ExecStartPost：启动当前服务之后执行的命令
+ExecReload：重启当前服务时执行的命令
+ExecStop：停止当前服务时执行的命令
+ExecStopPost：停止当其服务之后执行的命令
+RestartSec：自动重启当前服务间隔的秒数
+Restart：定义何种情况 Systemd 会自动重启当前服务，可能的值包括always（总是重启）、on-success、on-failure、on-abnormal、on-abort、on-watchdog
+TimeoutSec：定义 Systemd 停止当前服务之前等待的秒数
+Environment：指定环境变量</code></pre><h2 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h2><p>Target is a series of unit, like unit group.</p>
+<pre><code>$ systemctl list-unit-files --type=target
+
+$ systemctl list-dependencies multi-user.target
+
+$ systemctl get-default
+
+$ sudo systemctl set-default multi-user.target
+
+# 切换 Target 时，默认不关闭前一个 Target 启动的进程，
+# systemctl isolate 命令改变这种行为，
+# 关闭前一个 Target 里面所有不属于后一个 Target 的进程
+$ sudo systemctl isolate multi-user.target</code></pre><p>Target with traditional initd:</p>
+<pre><code>Traditional runlevel      New target name     Symbolically linked to...
+
+Runlevel 0           |    runlevel0.target -&gt; poweroff.target
+Runlevel 1           |    runlevel1.target -&gt; rescue.target
+Runlevel 2           |    runlevel2.target -&gt; multi-user.target
+Runlevel 3           |    runlevel3.target -&gt; multi-user.target
+Runlevel 4           |    runlevel4.target -&gt; multi-user.target
+Runlevel 5           |    runlevel5.target -&gt; graphical.target
+Runlevel 6           |    runlevel6.target -&gt; reboot.target</code></pre><p>Difference between them:</p>
+<pre><code>1）默认的 RunLevel（在/etc/inittab文件设置）现在被默认的 Target 取代，位置是/etc/systemd/system/default.target，通常符号链接到graphical.target（图形界面）或者multi-user.target（多用户命令行）。
+
+（2）启动脚本的位置，以前是/etc/init.d目录，符号链接到不同的 RunLevel 目录 （比如/etc/rc3.d、/etc/rc5.d等），现在则存放在/lib/systemd/system和/etc/systemd/system目录。
+
+（3）配置文件的位置，以前init进程的配置文件是/etc/inittab，各种服务的配置文件存放在/etc/sysconfig目录。现在的配置文件主要存放在/lib/systemd目录，在/etc/systemd目录里面的修改可以覆盖原始设置。</code></pre><h2 id="Journal"><a href="#Journal" class="headerlink" title="Journal"></a>Journal</h2><p>Systemd manages all the logs. <code>journalctl</code> can be used to check kernel log and app logs. It’s located at <code>/etc/systemd/journald.con</code>.</p>
+<pre><code>$ sudo journalctl
+
+# 查看内核日志（不显示应用日志）
+$ sudo journalctl -k
+
+# 查看系统本次启动的日志
+$ sudo journalctl -b
+$ sudo journalctl -b -0
+
+# 查看上一次启动的日志（需更改设置）
+$ sudo journalctl -b -1
+
+# 查看指定时间的日志
+$ sudo journalctl --since="2012-10-30 18:17:16"
+$ sudo journalctl --since "20 min ago"
+$ sudo journalctl --since yesterday
+$ sudo journalctl --since "2015-01-10" --until "2015-01-11 03:00"
+$ sudo journalctl --since 09:00 --until "1 hour ago"
+
+# 显示尾部的最新10行日志
+$ sudo journalctl -n
+
+# 显示尾部指定行数的日志
+$ sudo journalctl -n 20
+
+# 实时滚动显示最新日志
+$ sudo journalctl -f
+
+# 查看指定服务的日志
+$ sudo journalctl /usr/lib/systemd/systemd
+
+# 查看指定进程的日志
+$ sudo journalctl _PID=1
+
+# 查看某个路径的脚本的日志
+$ sudo journalctl /usr/bin/bash
+
+# 查看指定用户的日志
+$ sudo journalctl _UID=33 --since today
+
+# 查看某个 Unit 的日志
+$ sudo journalctl -u nginx.service
+$ sudo journalctl -u nginx.service --since today
+
+# 实时滚动显示某个 Unit 的最新日志
+$ sudo journalctl -u nginx.service -f
+
+# 合并显示多个 Unit 的日志
+$ journalctl -u nginx.service -u php-fpm.service --since today
+
+# 查看指定优先级（及其以上级别）的日志，共有8级
+# 0: emerg
+# 1: alert
+# 2: crit
+# 3: err
+# 4: warning
+# 5: notice
+# 6: info
+# 7: debug
+$ sudo journalctl -p err -b
+
+# 日志默认分页输出，--no-pager 改为正常的标准输出
+$ sudo journalctl --no-pager
+
+# 以 JSON 格式（单行）输出
+$ sudo journalctl -b -u nginx.service -o json
+
+# 以 JSON 格式（多行）输出，可读性更好
+$ sudo journalctl -b -u nginx.serviceqq
+ -o json-pretty
+
+# 显示日志占据的硬盘空间
+$ sudo journalctl --disk-usage
+
+# 指定日志文件占据的最大空间
+$ sudo journalctl --vacuum-size=1G
+
+# 指定日志文件保存多久
+$ sudo journalctl --vacuum-time=1years</code></pre><h2 id="Target-Exec-Sequence"><a href="#Target-Exec-Sequence" class="headerlink" title="Target Exec Sequence"></a>Target Exec Sequence</h2><pre><code>1. /etc/systemd/system/default.target，pointing to /usr/lib/systemd/system/graphical.target，dependencies: multi-user.target =&gt; basic.target =&gt; sysinit.target 。
+
+2. local-fs.target: exec file system related kernel units according to /etc/fstab and /etc/inittab.
+
+3. sysinit.target: start system units, like mount, swap, device, kernel, etc. 
+
+4. basic.target: general units, especially graphical management unit, according to `/etc/systemd/system/basic.target.wants`
+
+5. multi-user.target: sub units are located at `/etc/systemd/system/multi-user.target.wants`, set environment for multi-user, and firewall units.
+
+6. systemd-logind.service: login. See more details with `systemctl help systemd-logind.service`, exct with `/usr/lib/systemd/system/getty@.service`.
+
+Dependency: [System bootup process](https://www.freedesktop.org/software/systemd/man/bootup.html).</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -512,7 +689,7 @@ rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.c
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bh7cw.github.io/2020/07/14/install-openshift-cluster-on-aws/">https://bh7cw.github.io/2020/07/14/install-openshift-cluster-on-aws/</a>
+                    <a href="https://bh7cw.github.io/2020/08/10/systemd-101/">https://bh7cw.github.io/2020/08/10/systemd-101/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -550,12 +727,8 @@ rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.c
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Openshift/">
-                                    <span class="chip bg-color">Openshift</span>
-                                </a>
-                            
-                                <a href="/tags/AWS/">
-                                    <span class="chip bg-color">AWS</span>
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
                                 </a>
                             
                         </div>
@@ -597,29 +770,30 @@ rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.c
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/07/15/hack-on-fedora-on-aws-ec2/">
+                <a href="/2020/08/10/systemd-101/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Hack on Fedora CoreOS on AWS EC2">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Systemd 101">
                         
-                        <span class="card-title">Hack on Fedora CoreOS on AWS EC2</span>
+                        <span class="card-title">Systemd 101</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            This post concludes building Fedora CoreOS image with COSA on AWS EC2.
+                            This post introduces the Systemd.
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -632,19 +806,12 @@ rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.c
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/AWS/">
-                        <span class="chip bg-color">AWS</span>
-                    </a>
-                    
-                    <a href="/tags/Fedora-CoreOS/">
-                        <span class="chip bg-color">Fedora CoreOS</span>
-                    </a>
-                    
-                    <a href="/tags/CoreOS-Assembler/">
-                        <span class="chip bg-color">CoreOS Assembler</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -658,37 +825,44 @@ rm -rf $HOME/cluster-${GUID}</code></pre><p>More info: <a href="https://github.c
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/13/hello-world/">
+                <a href="/2020/08/06/github-practical-skills/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Github practical skills">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Github practical skills</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info.
-Quick StartCreate a new post$ hexo new
+                            This post concludes pratical skills to use Github as a team member.
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
+                            <a href="/categories/Github/" class="post-category">
+                                    Github
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Github/">
+                        <span class="chip bg-color">Github</span>
+                    </a>
+                    
                 </div>
                 
             </div>
