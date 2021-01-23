@@ -244,13 +244,6 @@
 
 <div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
-        <div id="prev-cover" class="left waves-effect carousel-control">
-            <i class="icon fa fa-angle-left"></i>
-        </div>
-        <div id="next-cover" class="right waves-effect carousel-control">
-            <i class="icon fa fa-angle-right"></i>
-        </div>
-    
 
     <div class="carousel-item red white-text bg-cover about-cover">
         <div class="container">
@@ -348,125 +341,6 @@
     </div>
 
     
-        
-
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('/images/4.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">Github practical skills</div>
-                            <div class="description center-align">
-                                
-                                    This post concludes pratical skills to use Github as a team member.
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2020/08/06/github-practical-skills/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>Read more
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('/images/1.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">Install Openshift Cluster on AWS</div>
-                            <div class="description center-align">
-                                
-                                    This post includes steps to install openshift cluster on aws.
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2020/07/14/install-openshift-cluster-on-aws/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>Read more
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('/images/6.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">Systemd 101</div>
-                            <div class="description center-align">
-                                
-                                    This post introduces the Systemd.
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2020/08/10/systemd-101/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>Read more
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('/images/3.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">Hack on Fedora CoreOS on AWS EC2</div>
-                            <div class="description center-align">
-                                
-                                    This post concludes building Fedora CoreOS image with COSA on AWS EC2.
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2020/07/15/hack-on-fedora-on-aws-ec2/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>Read more
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('/images/5.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">Linux Commands</div>
-                            <div class="description center-align">
-                                
-                                    This post concludes useful Linux commands.
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2020/07/23/linux-commands/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>Read more
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-    
 </div>
 
 <script>
@@ -501,32 +375,11 @@
 
         let carouselIntervalId;
         
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
 
         function restartPlay() {
             
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
         };
 
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
         
     });
 </script>
@@ -550,127 +403,6 @@
                     <div id="recommend-sections" class="recommend">
                         
 
-
-
-
-
-<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;Recommended Posts</div>
-
-<div class="row">
-
-    
-    
-    <div class="col s12" >
-        <div class="post-card" style="background-image: url('/medias/featureimages/14.jpg')">
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Github/" class="category">Github</a>
-                        
-                    
-                </div>
-                <a href="/2020/08/06/github-practical-skills/">
-                    <h3 class="post-title">Github practical skills</h3>
-                </a>
-                <p class="post-description">This post concludes pratical skills to use Github as a team member.</p>
-                <a href="/2020/08/06/github-practical-skills/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>Read more
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
-        <div class="post-card" style="background-image: url('/medias/featureimages/15.jpg')">
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Openshift/" class="category">Openshift</a>
-                        
-                    
-                </div>
-                <a href="/2020/07/14/install-openshift-cluster-on-aws/">
-                    <h3 class="post-title">Install Openshift Cluster on AWS</h3>
-                </a>
-                <p class="post-description">This post includes steps to install openshift cluster on aws.</p>
-                <a href="/2020/07/14/install-openshift-cluster-on-aws/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>Read more
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
-        <div class="post-card" style="background-image: url('/medias/featureimages/23.jpg')">
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Linux/" class="category">Linux</a>
-                        
-                    
-                </div>
-                <a href="/2020/08/10/systemd-101/">
-                    <h3 class="post-title">Systemd 101</h3>
-                </a>
-                <p class="post-description">This post introduces the Systemd.</p>
-                <a href="/2020/08/10/systemd-101/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>Read more
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12" data-aos="zoom-in-up">
-        <div class="post-card" style="background-image: url('/medias/featureimages/0.jpg')">
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Linux/" class="category">Linux</a>
-                        
-                    
-                </div>
-                <a href="/2020/07/15/hack-on-fedora-on-aws-ec2/">
-                    <h3 class="post-title">Hack on Fedora CoreOS on AWS EC2</h3>
-                </a>
-                <p class="post-description">This post concludes building Fedora CoreOS image with COSA on AWS EC2.</p>
-                <a href="/2020/07/15/hack-on-fedora-on-aws-ec2/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>Read more
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
-        <div class="post-card" style="background-image: url('/medias/featureimages/12.jpg')">
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Linux/" class="category">Linux</a>
-                        
-                    
-                </div>
-                <a href="/2020/07/23/linux-commands/">
-                    <h3 class="post-title">Linux Commands</h3>
-                </a>
-                <p class="post-description">This post concludes useful Linux commands.</p>
-                <a href="/2020/07/23/linux-commands/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>Read more
-                </a>
-            </div>
-        </div>
-    </div>
-    
-
-</div>
 
 
                     </div>
@@ -940,9 +672,9 @@
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Hello Hexo">
                             
-                            <span class="card-title">Hello World</span>
+                            <span class="card-title">Hello Hexo</span>
                         </div>
                     </a>
 
