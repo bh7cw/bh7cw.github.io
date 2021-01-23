@@ -2,8 +2,8 @@
 title: Systemd 101
 date: 2020-08-10 18:33:49
 author: bh7cw
-top: true
-cover: true
+#top: true
+cover: false
 coverImg: /images/6.jpg
 toc: true
 summary: This post introduces the Systemd.

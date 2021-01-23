@@ -2,8 +2,8 @@
 title: Github practical skills
 date: 2020-08-06 18:33:49
 author: bh7cw
-top: true
-cover: true
+#top: true
+cover: false
 coverImg: /images/4.jpg
 toc: true
 summary: This post concludes pratical skills to use Github as a team member.

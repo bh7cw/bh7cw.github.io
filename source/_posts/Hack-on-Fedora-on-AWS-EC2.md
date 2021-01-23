@@ -1,9 +1,9 @@
 ---
 title: Hack on Fedora CoreOS on AWS EC2
-date: 2020-07-15 18:33:49
+date: 2020-07-16 18:33:49
 author: bh7cw
-top: true
-cover: true
+#top: true
+cover: false
 coverImg: /images/3.jpg
 toc: true
 summary: This post concludes building Fedora CoreOS image with COSA on AWS EC2.

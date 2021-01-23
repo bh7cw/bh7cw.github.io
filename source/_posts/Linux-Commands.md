@@ -2,8 +2,8 @@
 title: Linux Commands
 date: 2020-07-23 18:33:49
 author: bh7cw
-top: true
-cover: true
+#top: true
+cover: false
 coverImg: /images/5.jpg
 toc: true
 summary: This post concludes useful Linux commands.
